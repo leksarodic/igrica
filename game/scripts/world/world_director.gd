@@ -64,6 +64,9 @@ func build(start_region: String, start_spawn: String = "default", reset_player: 
 	if build_system != null:
 		build_system.restore(start_region)
 	_ensure_companion()
+	if Game.state != null:
+		Game.state.world["regions"] = Game.state.world.get("regions", {})
+		Game.state.world["regions"][start_region] = true
 	Game.set_region(start_region, start_spawn)
 	Events.region_ready.emit(start_region)
 	_busy = false

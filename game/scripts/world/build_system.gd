@@ -116,7 +116,10 @@ func _update_ghost_transform() -> void:
 	ghost.rotation.y = atan2(fwd.x, fwd.z)
 	if _ghost_mesh != null:
 		var tint := Palette.MINT if _valid else Palette.ASH
-		_ghost_mesh.material_override = MeshFactory.flat_material(Color(tint.r, tint.g, tint.b, 0.55), 1.0)
+		var ghost_mat := MeshFactory.flat_material(Color(tint.r, tint.g, tint.b, 0.55), 1.0)
+		ghost_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+		ghost_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+		_ghost_mesh.material_override = ghost_mat
 
 
 func _can_place(build_id: String, pos: Vector3) -> bool:

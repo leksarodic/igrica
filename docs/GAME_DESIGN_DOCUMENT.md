@@ -366,11 +366,11 @@ The game has no external notifications of any kind. It never asks the player to 
 | Side quests | 8 | 2 (Pip's Bell, The Ferryman's Debt) |
 | Dungeons | 4 handcrafted + procedural caves | 1 handcrafted (Sunken Choir) + procedural caves |
 | Bosses | 4 | 1 (Hollow Stag) |
-| Enemies | 7 | 4 (Crawler, Ram, Moth, Sentinel) + boss |
+| Enemies | 7 | 5 (Crawler, Ram, Moth, Sentinel, Wisp) + boss |
 | Companions | 3 | 1 (Nissa) + Pip as ambient pet |
 | Weapons | 18 | 3 |
 | Cloaks/charms | 32 | 4 cloaks, 5 charms |
-| Skills | 18 | 8 |
+| Skills | 18 | 8 data entries; 3 usable quick-slot skills in this slice |
 | Recipes | 24 | 10 |
 | Buildables | 6 | 5 |
 | Puzzles | 8 families, ~20 instances | 4 instances across 4 families (gate, sluice, echo gallery, boss window) |

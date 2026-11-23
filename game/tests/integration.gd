@@ -117,6 +117,14 @@ func _ready() -> void:
 	world.build("sunken_choir", "entrance")
 	await get_tree().process_frame
 	check(world.region_id == "sunken_choir", "dungeon built")
+	var maze := world.region.get_node_or_null("EchoMaze")
+	check(maze != null, "the echo gallery exists")
+	if maze != null:
+		maze._strike(0)
+		maze._strike(2)
+		maze._strike(1)
+		check(maze.solved, "the echo gallery accepts low/high/mid")
+
 	var boss := _find_boss(world.region)
 	check(boss != null, "boss exists")
 	if boss != null:

@@ -3,6 +3,7 @@ extends CanvasLayer
 ## Touch is a first-class input, not a shrunken mouse. A floating left stick,
 ## a right-side camera drag, and a thumb-arc action cluster sized for landscape.
 
+var _root: Control
 var _left: TouchJoystick
 var _camera: Control
 var _buttons: Array[Control] = []
@@ -71,10 +72,14 @@ class TouchButton:
 
 func _ready() -> void:
 	layer = 15
-	_visible = InputRouter.is_touch_mode()
+	_visible = InputRouter.is_touch_mode() or InputRouter.force_touch
+	_root = Control.new()
+	_root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_root)
 	_build()
 	get_viewport().size_changed.connect(_layout)
-	_layout()
+	call_deferred("_layout")
 	InputRouter.mode_changed.connect(func(m): _visible = m == InputRouter.Mode.TOUCH; _update_visible())
 
 
@@ -83,11 +88,11 @@ func _build() -> void:
 	_camera.name = "CameraDrag"
 	_camera.mouse_filter = Control.MOUSE_FILTER_STOP
 	_camera.gui_input.connect(_on_camera_input)
-	add_child(_camera)
+	_root.add_child(_camera)
 
 	_left = TouchJoystick.new()
 	_left.name = "LeftStick"
-	add_child(_left)
+	_root.add_child(_left)
 
 	var specs := [
 		["Strike", "attack_light", 52.0, Color("#c9613c"), Vector2(-170, -200)],
@@ -105,7 +110,7 @@ func _build() -> void:
 		b.radius = spec[2]
 		b.accent = spec[3]
 		b.position = spec[4]
-		add_child(b)
+		_root.add_child(b)
 		_buttons.append(b)
 	var menu := TouchButton.new()
 	menu.label = "Menu"
@@ -114,39 +119,72 @@ func _build() -> void:
 	menu.accent = Color("#a9764a")
 	menu.position = Vector2(-80, 20)
 	menu.pressed.connect(func(): Events.open_screen.emit("journal", {}))
-	add_child(menu)
+	_root.add_child(menu)
 	_buttons.append(menu)
 
 
 func _layout() -> void:
-	var s := get_viewport().get_visible_rect().size
-	var safe := UITheme.safe_rect(get_viewport())
-	_camera.position = Vector2(safe.position.x + safe.size.x * 0.42, safe.position.y)
-	_camera.size = Vector2(safe.size.x * 0.58, safe.size.y)
-	_left.position = Vector2(safe.position.x, safe.position.y)
-	_left.size = Vector2(safe.size.x * 0.45, safe.size.y)
-	_left.set_center(Vector2(safe.position.x + 150, safe.position.y + safe.size.y - 170))
+	var s := _root.size
+	if s.x < 1.0 or s.y < 1.0:
+		s = get_viewport().get_visible_rect().size
+	_root.position = Vector2.ZERO
+	_camera.anchor_left = 0.0
+	_camera.anchor_top = 0.0
+	_camera.anchor_right = 0.0
+	_camera.anchor_bottom = 0.0
+	_camera.position = Vector2(s.x * 0.42, 0)
+	_camera.size = Vector2(s.x * 0.58, s.y)
+	_left.anchor_left = 0.0
+	_left.anchor_top = 0.0
+	_left.anchor_right = 0.0
+	_left.anchor_bottom = 0.0
+	_left.position = Vector2.ZERO
+	_left.size = Vector2(s.x * 0.46, s.y)
+	var scale := clampf(minf(s.x / 1600.0, s.y / 900.0), 1.0, 1.8)
+	_left.radius = 78.0 * scale
+	_left.set_center(Vector2(s.x * 0.46 * 0.30, s.y * 0.78))
+	var spec := {
+		"Strike": Vector2(120, 118),
+		"Heavy": Vector2(256, 74),
+		"Dodge": Vector2(120, 270),
+		"Use": Vector2(300, 210),
+		"Listen": Vector2(390, 150),
+		"Mark": Vector2(92, 400),
+		"Toll": Vector2(216, 392),
+	}
 	for b in _buttons:
 		if b == null:
 			continue
-		var rel: Vector2 = b.position
+		b.anchor_left = 0.0
+		b.anchor_top = 0.0
+		b.anchor_right = 0.0
+		b.anchor_bottom = 0.0
 		if b.label == "Menu":
-			b.position = Vector2(safe.position.x + safe.size.x - 76, safe.position.y + 26)
-		else:
-			b.position = Vector2(safe.position.x + safe.size.x + rel.x, safe.position.y + safe.size.y + rel.y)
+			b.radius = 28.0 * scale
+			b.custom_minimum_size = Vector2(b.radius * 2, b.radius * 2)
+			b.size = b.custom_minimum_size
+			b.pivot_offset = b.size * 0.5
+			b.position = Vector2(s.x - b.size.x - 28.0, 24.0)
+		elif spec.has(b.label):
+			var off: Vector2 = spec[b.label]
+			var r := (52.0 if b.label == "Strike" else (46.0 if b.label == "Use" else (42.0 if b.label == "Heavy" else (40.0 if b.label == "Dodge" else 36.0)))) * scale
+			b.radius = r
+			b.custom_minimum_size = Vector2(r * 2, r * 2)
+			b.size = b.custom_minimum_size
+			b.pivot_offset = b.size * 0.5
+			b.position = Vector2(s.x - off.x - r, s.y - off.y - r)
 	_update_visible()
-
 
 func _update_visible() -> void:
 	var show := _visible and not Game.dialogue_active
-	for c in get_children():
+	for c in _root.get_children():
 		if c is Control:
 			c.visible = show
 
 
 func _process(_delta: float) -> void:
 	var show := _visible and not Game.dialogue_active
-	for c in get_children():
+	for c in _root.get_children():
 		if c is Control and c.visible != show:
 			c.visible = show
 

@@ -190,7 +190,7 @@ Saves are **JSON**, schema-versioned, checksummed, atomic, and human-inspectable
 
 - Written to `user://saves/<slot>.json.tmp`, flushed, fsynced where available, then renamed over `<slot>.json`. The previous file is rotated to `<slot>.json.bak`. A `.journal` marker exists during a write so an interrupted write is repaired on next boot from the `.bak`.
 - Checksum is SHA-256 over canonical JSON of `state` + header fields except `checksum`. A mismatch does not delete anything: the save is quarantined as `<slot>.corrupt-<timestamp>.json` and the backup is offered.
-- Schema migrations live in `SaveMigrations` as an ordered list; every migration has a fixture in `tests/fixtures/`.
+- Schema migrations live in `SaveMigrations` as an ordered, guarded list. Schema 1 is current; the hook exists and a future migration must add a fixture before merge.
 - Autosave at region transitions, lantern rests, quest stage changes, and app backgrounding. Autosaves use a separate `autosave` slot and never overwrite manual slots.
 - **The game never punishes absence.** No timestamps gate content, resources do not decay, and there is no offline progress to lose.
 
@@ -269,7 +269,7 @@ Dialogue format: nodes with `id`, `speaker`, `text`, optional `choices` (text, c
 
 ## 14. Testing strategy
 
-**Current results (23 November 2026):** 47 logic/save/sync checks, 45 integration checks, 36 end-to-end playthrough checks, content validation OK, macOS export booted, iOS Xcode project generated with an unsigned device build succeeding. Full details and open defects are in `docs/PLAYTESTING.md`.
+**Current results (23 November 2026):** 47 logic/save/sync checks, 47 integration checks, 36 end-to-end playthrough checks, content validation OK, macOS export booted, iOS Xcode project generated with an unsigned device build succeeding. Full details and open defects are in `docs/PLAYTESTING.md`.
 
 1. **Pure logic tests (headless, fast):** save serialization/checksum/atomicity, migrations, sync conflict matrix, inventory/equipment rules, crafting, quest state machines, puzzle solvers, dialogue conditions, procedural cave invariants, damage math, AI utility scoring.
 2. **Scene integration tests (headless):** boot world, simulate player input via `Input.action_press`, complete the quest chain with scripted interactions, verify save/load round-trip including world flags, run the boss arena with an invulnerable test player to validate phase transitions.

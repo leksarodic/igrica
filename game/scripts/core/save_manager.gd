@@ -184,7 +184,8 @@ func load_file(path: String, quarantine_on_failure: bool = true) -> Dictionary:
 	var schema := int(header.get("schema", 0))
 	if schema > SCHEMA:
 		return {"ok": false, "reason": "This save was made by a newer version of the game.", "path": path, "schema": schema}
-	# Future schema migrations happen here, in order, before the state is used.
+	if schema < SCHEMA:
+		state_data = SaveMigrations.migrate(state_data, schema)
 	return {
 		"ok": true,
 		"header": header,

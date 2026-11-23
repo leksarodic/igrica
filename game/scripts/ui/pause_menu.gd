@@ -26,8 +26,10 @@ func _ready() -> void:
 	_root.add_child(_dim)
 	_panel = PanelContainer.new()
 	_panel.set_anchors_preset(Control.PRESET_CENTER)
-	_panel.position = Vector2(-560, -360)
-	_panel.custom_minimum_size = Vector2(1120, 720)
+	var safe := UITheme.safe_rect(get_viewport())
+	var panel_size := Vector2(minf(1120.0, safe.size.x - 80.0), minf(720.0, safe.size.y - 80.0))
+	_panel.custom_minimum_size = panel_size
+	_panel.position = -panel_size * 0.5
 	_panel.add_theme_stylebox_override("panel", UITheme.paper_style(0.98, 24))
 	_root.add_child(_panel)
 	var row := HBoxContainer.new()
@@ -369,7 +371,7 @@ func _show_skills() -> void:
 	_screen_title("Skills", "No build traps. Respec at any lantern.")
 	var pts := int(Game.state.player.get("skill_points", 0))
 	_content_box.add_child(UITheme.body("Skill points: %d" % pts, 16, UITheme.INK_SOFT))
-	for sid in Game.content.skills.keys():
+	for sid in ["hushstep", "toll", "echo_mark"]:
 		var s: Dictionary = Game.content.skill(sid)
 		var learned: bool = sid in Game.state.player.get("skills", [])
 		var b := UITheme.button("%s — %s" % [String(s.get("name", sid)), String(s.get("description", ""))])
@@ -385,6 +387,7 @@ func _show_skills() -> void:
 				_show_skills()
 			)
 		_content_box.add_child(b)
+	_content_box.add_child(UITheme.body("Lantern Song and Quiet Passage exist as effects but are not bound to quick slots in this slice. Counterpoint, Reed Bind, and Second Verse are designed for the full game but are not implemented.", 13, UITheme.INK_SOFT))
 
 
 func _show_party() -> void:

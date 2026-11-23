@@ -13,6 +13,7 @@ var _marks: Array[Node3D] = []
 func build(parent: Node3D, origin: Vector3, reward_parent: Node3D) -> void:
 	position = origin
 	parent.add_child(self)
+	add_to_group("resonance")
 	for i in 3:
 		var root := Node3D.new()
 		root.position = Vector3(-3.0 + i * 3.0, 0, 0)

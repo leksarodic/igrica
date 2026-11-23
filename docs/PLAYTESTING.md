@@ -53,7 +53,7 @@ Coverage includes:
 godot --headless --path game res://tests/Integration.tscn
 ```
 
-Result: **45 passed, 0 failed**
+Result: **47 passed, 0 failed**
 
 Coverage includes:
 

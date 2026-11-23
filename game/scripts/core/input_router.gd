@@ -46,7 +46,7 @@ func setup_actions() -> void:
 	_add("lock_on", [_key(KEY_TAB), _button(JOY_BUTTON_RIGHT_STICK)])
 	_add("journal", [_key(KEY_J)])
 	_add("map", [_key(KEY_M)])
-	_add("camera_drag", [_mouse(MOUSE_BUTTON_RIGHT), _key(KEY_CTRL)])
+	_add("camera_drag", [_mouse(MOUSE_BUTTON_MIDDLE), _key(KEY_CTRL)])
 	_add("use_tonic", [_key(KEY_1), _button(JOY_BUTTON_DPAD_LEFT)])
 	_add("companion_command", [_key(KEY_C), _button(JOY_BUTTON_DPAD_RIGHT)])
 	_add("ui_back", [_key(KEY_ESCAPE), _button(JOY_BUTTON_B)])
@@ -90,7 +90,7 @@ func _input(event: InputEvent) -> void:
 		return
 	if event is InputEventMouseMotion:
 		_set_mode(Mode.KEYBOARD_MOUSE)
-		if mouse_captured or Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+		if mouse_captured or Input.is_mouse_button_pressed(MOUSE_BUTTON_MIDDLE):
 			camera_delta += event.relative * Settings.sensitivity
 		return
 	if event is InputEventMouseButton:
@@ -120,6 +120,8 @@ func _process(_delta: float) -> void:
 
 
 func _set_mode(new_mode: int) -> void:
+	if force_touch and new_mode != Mode.TOUCH:
+		return
 	if new_mode == mode:
 		return
 	mode = new_mode

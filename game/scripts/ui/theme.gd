@@ -19,13 +19,16 @@ static var _serif_bold: SystemFont
 static func safe_rect(viewport: Viewport) -> Rect2:
 	if viewport == null:
 		return Rect2(Vector2.ZERO, Vector2(1600, 900))
-	var vp_size := viewport.get_visible_rect().size
+	var stretch := viewport.get_stretch_transform().get_scale()
+	if stretch.x <= 0.001 or stretch.y <= 0.001:
+		stretch = Vector2.ONE
+	var base_size := viewport.get_visible_rect().size / stretch
 	var win := DisplayServer.window_get_size()
 	if win.x <= 0 or win.y <= 0:
-		return Rect2(Vector2.ZERO, vp_size)
+		return Rect2(Vector2.ZERO, base_size)
 	var safe := DisplayServer.get_display_safe_area()
-	var scale := vp_size / Vector2(win)
-	return Rect2(Vector2(safe.position) * scale, Vector2(safe.size) * scale)
+	var px_to_base := base_size / Vector2(win)
+	return Rect2(Vector2(safe.position) * px_to_base, Vector2(safe.size) * px_to_base)
 
 
 static func ts(size: int) -> int:

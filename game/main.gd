@@ -248,8 +248,8 @@ func _build_title() -> void:
 	ui.add_child(root)
 
 	var panel := PanelContainer.new()
-	panel.position = Vector2(64, 96)
-	panel.custom_minimum_size = Vector2(560, 560)
+	panel.position = Vector2(48, 40)
+	panel.custom_minimum_size = Vector2(540, 520)
 	var sb := StyleBoxFlat.new()
 	sb.bg_color = Color(0.09, 0.11, 0.12, 0.82)
 	sb.border_color = Color("#a9764a")
@@ -282,7 +282,7 @@ func _build_title() -> void:
 	var title := Label.new()
 	title.text = "The Long Note"
 	title.add_theme_font_override("font", display)
-	title.add_theme_font_size_override("font_size", 64)
+	title.add_theme_font_size_override("font_size", 56)
 	title.add_theme_color_override("font_color", Color("#e6dfce"))
 	stack.add_child(title)
 
@@ -315,7 +315,8 @@ func _build_title() -> void:
 	version.add_theme_font_override("font", font)
 	version.add_theme_font_size_override("font_size", 13)
 	version.add_theme_color_override("font_color", Color("#8e9191"))
-	version.position = Vector2(66, 828)
+	version.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
+	version.position = Vector2(50, -28)
 	root.add_child(version)
 
 

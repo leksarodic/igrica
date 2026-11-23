@@ -82,7 +82,7 @@ godot --path game -- --world bellhollow --benchmark
 | Action | Keyboard / mouse | Gamepad |
 |---|---|---|
 | Move | WASD / arrows | Left stick |
-| Camera | Right-drag / mouse drag | Right stick |
+| Camera | Middle-drag or Ctrl-drag | Right stick |
 | Light attack | Left click or J | X |
 | Heavy attack | Right click or K | Y |
 | Dodge | Space | B |
@@ -165,7 +165,7 @@ Current results (macOS 27, Apple M3):
 ```text
 content validation  OK   (novella 8,996 words; 31 items; 12 recipes; 8 dialogues; 5 builds)
 TestScene           47 passed, 0 failed
-Integration         45 passed, 0 failed
+Integration         47 passed, 0 failed
 Playthrough         36 passed, 0 failed
 macOS export        boots; frame capture verified
 iOS export          Xcode project generated; unsigned device build succeeded
@@ -200,7 +200,7 @@ The sync logic is tested with two simulated devices and a conflict; see `docs/ar
 
 - Third-person movement, sprint, dodge, camera orbit, terrain following, water slowdown.
 - Melee combat with light/heavy attacks, poise, stagger, pitch bonuses, weapon-specific damage, dodge i-frames, healing tonics.
-- Four enemies (Reed Crawler ambusher, Bramble Ram charger, Choir Moth support, Stone Sentinel guard) and the Hollow Stag boss with a chime-order shell puzzle.
+- Five enemies (Reed Crawler ambusher, Bramble Ram charger, Choir Moth support, Stone Sentinel guard, Returning Wisp harasser) and the Hollow Stag boss with a chime-order shell puzzle.
 - Nissa as a real companion: follows, fights, marks weak points, comments, waits/follows on command, persists across regions.
 - Quest chain from arrival through the Sunken Choir, with multiple dialogue choices and a recorded faction outcome.
 - Two side quests: Pip's Bell and the north-dock repair, each with a real world change.
