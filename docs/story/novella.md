@@ -10,13 +10,13 @@ The road into Carrow Vale had twelve switchbacks, and Wren Alk counted them the 
 
 By the ninth, the valley came up to meet her. Wet stone, cold reed, woodsmoke. Water moving under a skin of ice. Then the whole long bowl of the place, terraced and brown and gold, with the town stacked in its center like cups on a shelf. The river ran through it in a silver braid. On the highest step, the petrified wood caught the last light and threw it back in thin, wrong colors.
 
-Wren set down her pack. The copper canister was warm against her ribs, which was a lie; it had been four days since the cremation. She kept it wrapped in her father's coat anyway, because the coat still smelled of tar and pipe smoke and the particular sourness of a man who lived his life on boats and never learned to swim.
+Wren set down her pack. The copper canister was warm against her ribs, which was a lie; it had been four days since the cremation. She kept it wrapped in her father's coat, which still smelled of tar and pipe smoke and a man who never learned to swim.
 
-She had heard the note all her life, a low pressure behind the eyes that became a sound only when she stopped moving. Most people called it the wind in the rocks. Her mother had called it the undertone. Wren had spent six years in the Low Water convincing herself it was nothing, and the valley had waited patiently to prove her wrong.
+She had heard the note all her life, a low pressure behind the eyes that became a sound only when she stopped moving. Most people called it the wind in the rocks; her mother called it the undertone. Wren had spent six years in the Low Water convincing herself it was nothing.
 
-It was thinner than she remembered. Not silent. Thin, like a wire strung too tight and asked to carry too much.
+It was thinner than she remembered. Thin, like a wire strung too tight and asked to carry too much.
 
-At the gatehouse a Tender told her the Tending was in three days and the Warden had shut the west road because the Hush was moving. She looked at the canister and did not ask whose it was.
+At the gatehouse a Tender told her the Tending was in five days and the west road was shut because the Hush was moving. She looked at the canister and did not ask whose it was.
 
 "Don't answer it," she said.
 
@@ -54,13 +54,13 @@ Sable turned. Her face did not change, which was worse than if it had. "Wren Alk
 
 "He didn't believe in the bell."
 
-"Corin didn't believe in anything he couldn't argue with." Sable turned back to the scaffolding. "The offer stands. The Tending is in three days. It would be a good death."
+"Corin didn't believe in anything he couldn't argue with." Sable turned back to the scaffolding. "The offer stands. The Tending is in five days. It would be a good death."
 
 Wren wanted to hit something. Instead she said, "He asked to be put in the reeds at the north channel. He made me write it down."
 
 "Then put him in the reeds," Sable said, without turning. "I'm not the warden of your father."
 
-That was the thing about Sable Voss. She never gave you the argument you were ready for.
+Sable never gave you the argument you were ready for.
 
 The bell rang the ninth hour at midnight. On the seventh stroke it faltered.
 
@@ -277,7 +277,7 @@ Pell listened with his eyes closed. When she finished, he opened them and said, 
 
 Wren set down her cup. "Taken."
 
-"Harvested was the word they used. The first were volunteers. Criminals, debtors, the old and the willing. It was called the Gift. Then the Hush came again, and the volunteers were not enough, and the Gift became a levy, and the levy became a hunt. They took people, Wren. They silenced them and put their voices in the bell, and the valley was safe, and everyone agreed not to say the word for it. For fifteen years. Then the Long Silence."
+"The first were volunteers: criminals, debtors, the old and the willing. It was called the Gift, then the Harvests. Then the Hush came again, and the Gift became a levy, and the levy became a hunt. They silenced people and put their voices in the bell, and the valley was safe, and everyone agreed not to say the word for it. For fifteen years. Then the Long Silence."
 
 "The Long Silence."
 
@@ -372,6 +372,10 @@ Wren turned around. "You are asking me to be a lie."
 Wren left her on the platform with the lanterns and the bell. On the stairs, halfway down, she had to stop and put her hand against the wall, because the note was in her teeth and her chest, and her brother's voice was somewhere inside it, saying her name in a copy that was almost right.
 
 She did not answer. She went down into the town.
+
+At the foot of the tower stairs, Pell was waiting. He did not ask what Sable had said. He gave her a folded map of the Glasswood edge, with a circle drawn in Mira's hand. "She kept a camp under the stone pine," he said. "If there is a trail, it starts there. But the Tending is in two days, Wren. Whatever you find, you will have to come back and sing it."
+
+She went down to the old sluice that night with his key in her hand.
 ## 5. The Undersong
 
 The old sluice gate was under the north terrace, behind a curtain of ivy trained, once, into the shape of a bell. Pell's key turned with a groan. The gate opened onto a stair that went down into cold air and the sound of water.
@@ -382,7 +386,7 @@ The stair descended for a long time. The walls changed from brick to cut stone t
 
 At the bottom, the sluice opened into a gallery.
 
-Wren had expected a cave. What she found was a cathedral: a ceiling thirty feet high, worked with ribs of pale stone, a floor of black water still as glass, and a narrow walkway along one wall. Columns rose from the water at intervals, each hollow, each humming a different note. The notes together made a chord so low and wide that Wren felt it in her bones before she heard it.
+Wren had expected a cave. She found a cathedral: a ceiling thirty feet high, ribs of pale stone, black water, a narrow walkway. Columns rose from the water at intervals, each hollow, each humming a different note. The notes together made a chord so low and wide that Wren felt it in her bones before she heard it.
 
 "The Cantors built this," Nissa whispered.
 
@@ -461,6 +465,8 @@ Wren looked at the copper lid. There was a name scratched into it, old and faint
 "Not Tam," she said. "Someone else."
 ## 6. Glasswood
 
+They left before dawn, carrying Pell's map and the jar.
+
 Glasswood had been a pine forest once. Now the trees were stone: silver-grey trunks without bark, branches like frozen lightning, a canopy of shards that split the light. Nothing grew on the ground except glassgrass, which rang faintly when the wind moved it. Sound behaved strangely there; Wren's footsteps came back a half-beat late, in a slightly different voice.
 
 They found Mira's camp at midday, under a stone pine: a bedroll, a cold fire, a pot, a lantern with the glass cracked, and a tin box with a latch. The box held a notebook, a compass, a coil of knotted cord, and a letter.
@@ -483,13 +489,13 @@ The letter was addressed to Wren. She sat down in the dry grass and read it whil
 
 *Sable is not a monster. She is a woman who chose the arithmetic because no one would help her choose anything else. Tell her I said so. Tell her I forgave her before I left. Tell her the door is open now, and the voices are still coming home, and some of them are angry, and that is all right.*
 
-*If you can, sing at the Tending. Not into the bell. Sing with the town. The bell will do what it does. The valley will do what it does. You will do what you do.*
+*If you can, sing at the Tending. Not into the bell. Sing with the town.*
 
 *I love you. I am proud of you. Put me in the reeds, not the bell.*
 
 *— Mira*
 
-Wren read it three times. The third time, she cried, which she had not done at the funeral, or at the gate, or in the tower. Nissa did not say anything. She stood with her back to Wren and watched the silver trees, and after a while she came and sat down and put her arm around her.
+Wren read it three times. The third time, she cried, which she had not done at the funeral or at the gate. Nissa stood with her back to her, watching the silver trees, then sat down and put an arm around her.
 
 "We can still go back," Nissa said. "The Tending won't wait, but the river will."
 
@@ -498,7 +504,9 @@ Wren folded the letter and put it inside her coat, against the canister's empty 
 "No," she said. "We go back and we sing."
 ## 7. The Hush
 
-The Hush began where the glassgrass ended.
+They walked west until the glassgrass ended.
+
+The Hush began there.
 
 There was no border, no wall. The silver trees simply stopped, and the ground became grey, and the sound went out of the world. Wren stood at the edge with a rope around her waist, and Nissa stood behind her with the other end belayed around a stone pine.
 
@@ -584,7 +592,7 @@ The grey stones began to hum. The chord came up through Wren's knees, through he
 
 The Hush breathed out.
 
-It was not a dramatic thing. There was no light, no wind. The grey simply became less grey, and the stones rang, and somewhere far away a door opened, and the sound of water came through it, and then the sound of a bell, cracked and thin and still ringing.
+It was not dramatic. There was no light, no wind. The grey became less grey, the stones rang, and somewhere far away a door opened: water, then a bell, cracked and thin and still ringing.
 
 Tam was gone. The Choirmaster was gone. Wren was alone in the grey with the rope around her waist, and then the rope pulled, hard, and she was running, and Nissa was shouting her name from the edge of the trees, and the world came back in a rush of silver and wind and the smell of cold pine.
 
@@ -593,13 +601,16 @@ She fell on the glassgrass and lay there, breathing.
 "Did you find her?" Nissa asked.
 
 "No," Wren said. "I found Tam."
+
+---
+
 ## 8. The Chord
 
 They reached Bellhollow at dusk, and the town was already in the basin.
 
 The Tending had begun. Lanterns in every window, a fire in the center of the basin, the Long Bell hanging above it all with its lip worked in reeds and waves. Sable stood on the steps in her slate coat, and beside her was a small table with a jar on it, and beside the jar was an iron mallet.
 
-The crowd turned as Wren came down the terrace steps. Nissa was on one side, Brannoc on the other; the Reedfolk had come up from the water and stood at the back with their lamps.
+The crowd turned as Wren came down the terrace steps. Nissa was on one side, Brannoc on the other; the Reedfolk stood at the back with their lamps.
 
 "Stop," Wren said.
 
@@ -607,17 +618,19 @@ Sable looked at her. Her face was tired, and old, and for a moment Wren saw what
 
 "You're too late," Sable said. "The Tending has begun."
 
-"Then end it differently." Wren walked into the basin. "I went into the Hush. I found my brother. I found the Choirmaster. I found my mother's letter." She held it up. "The Note is a debt. Every voice in that bell is a hole in the world, and the Hush is the shape of the holes. You have been feeding it for four hundred years and calling it safety."
+"Then end it differently." Wren walked into the basin. She held up a jar. "I went into the Undersong. I found the Vault. I found what the Note is made of." She broke the wax seal.
 
-The crowd stirred. Sable did not move.
+The voice that came out was a woman's, young and clear: *"They told us it was an honor. It was an honor. That is the worst of it. We lined up at the door with our journals and our best coats, and our neighbors wept, and we told them not to, because we were being useful. And then one year we were not asked. We were chosen."*
+
+The jar was empty. The basin was very quiet. "Yes," Sable said.
+
+"I went into the Hush," Wren said. "I found my brother. I found the Choirmaster. I found my mother's letter." She held it up. "The Note is a debt. Every voice in that bell is a hole in the world, and the Hush is the shape of the holes. You have been feeding it for four hundred years and calling it safety."
 
 "The law says the Warden chooses," Wren said. "You chose. You chose a boy who was already gone. You chose eleven names. You chose my mother's silence. And you are going to choose again tonight, and I am asking you to choose the harder thing."
 
 "Which is?"
 
 "To open the bell."
-
-The basin was silent.
 
 "Open it," Sable said, "and the Note fails. The Hush comes. We lose the valley."
 
@@ -633,7 +646,7 @@ Nissa stepped forward. She took the knotted cord from around her neck and held i
 
 Her voice was not beautiful. It was a reed-reader's voice, rough and plain, but the three notes came out true: the first, the second, the third flattened. The chord hung in the air.
 
-Brannoc sang next. His voice was a low rumble, half an octave down, and it should not have fit, and it did. Then the Reedfolk, in their long boats, a dozen voices. Then a woman on the second terrace. Then the baker. Then the children.
+Brannoc sang next. His voice was a low rumble, half an octave down, and it should not have fit, and it did. Then the Reedfolk at the back, a dozen voices. Then a woman on the second terrace. Then the baker. Then the children.
 
 Sable stood on the steps with the mallet in her hand and did not sing.
 
@@ -641,7 +654,7 @@ Wren climbed the steps to her. The bell hung above them, huge and green-black, a
 
 "You can ring the holding stroke," Wren said. "The Note will hold. The valley will live. And in ten years, or twenty, someone else's brother will be chosen, and you will be older, and it will be easier, and the debt will be a little deeper. Or you can ring the giving stroke, and the bell will crack, and the voices will go home, and we will have to learn to be a valley that sings."
 
-Sable looked at the bell. She looked at the crowd. She looked at Wren.
+Sable looked at the bell, the crowd, Wren.
 
 "Your mother said you would break the arithmetic," she said.
 
@@ -653,9 +666,9 @@ She struck the giving stroke.
 
 The bell did not ring. It *opened*. The note came out of it all at once, not a sound but a pressure, a wave that knocked Wren to her knees and blew out every lantern in the basin and cracked the tower from lip to shoulder with a noise like a mountain clearing its throat. The Long Bell split down the middle. The pieces hung there, ringing, and out of them came the voices.
 
-They came like birds. They came like water. They came in a crowd, thousands of them, old and young, singing and shouting and weeping, and they rose over the basin and spread out across the valley, and where they passed the grey went out of the air.
+They came like birds, like water: thousands of voices, old and young, singing and shouting and weeping. They rose over the basin and spread across the valley, and where they passed the grey went out of the air.
 
-Wren lay on the steps with her hands over her ears and her eyes open. She saw her brother's voice go up, a boy-shaped brightness, laughing. She saw a woman-shaped brightness that might have been her mother turn once in the air and look at her and then go on. She saw the Choirmaster at the edge of the crowd, tall and grey and very still, and then it was not there.
+Wren lay on the steps, hands over her ears, eyes open. She saw her brother's voice go up, a boy-shaped brightness, laughing. She saw a woman-shaped brightness that might have been her mother turn once in the air and look at her and then go on. She saw the Choirmaster at the edge of the crowd, tall and grey and very still, and then it was not there.
 
 The last of the voices went out over the western road, and the valley was quiet.
 
@@ -667,7 +680,7 @@ Sable tried again. Then she laughed, or cried, and put her hand over her mouth, 
 
 The Warden of the Note could not hear the Note anymore.
 
-Wren crawled to her and took her hand. Around them, the town was getting up. The fire had gone out. The tower stood, cracked, holding its broken bell. Somewhere on the second terrace, a child began to cry, and then a woman began to laugh, and then the whole basin was full of people making ordinary sounds, small and human, testing them like coins.
+Wren crawled to her and took her hand. Around them the town was getting up, the fire out, the cracked tower holding its broken bell. On the second terrace a child began to cry, then a woman began to laugh, and then the basin was full of people making ordinary sounds, small and human, testing them like coins.
 
 The spring under the town, which had been failing for sixty years, came back at dawn. It came up through the old channels with a noise like a crowd arriving, and the water ran clear, and the reeds at the north channel turned green.
 
@@ -677,13 +690,13 @@ The repairs took a season.
 
 The tower was shored with quarry stone and new timber. The broken bell was left where it hung, split from lip to shoulder. It was honest. It had opened.
 
-Sable lived in the Warden's house with the copper plate off her ear, learning to read lips and to write in a slate book. She was not forgiven, exactly. The town did not know how to forgive her, and she did not ask. But people brought her bread, and the children learned to face her when they spoke, and Brannoc came every week to shout at her about the quarry, which she seemed to enjoy.
+Sable lived in the Warden's house with the copper plate off her ear, learning to read lips and write in a slate book. She was not forgiven, exactly. The town did not know how, and she did not ask. But people brought her bread, the children learned to face her when they spoke, and Brannoc came every week to shout about the quarry, which she seemed to enjoy.
 
 Wren stayed. The valley needed a Listener, and the Listening House needed someone to go into the Undersong and give back the voices one at a time.
 
-They did it together, in the end: Wren and Nissa and Brannoc and a rotating handful of townspeople who wanted to learn the chord. They read the names on the copper lids, sang the three notes, and let the voices go. Some went easily. Some fought. Some asked to stay. The shelves were still full, and would be for years.
+They did it together: Wren and Nissa and Brannoc and a rotating handful of townspeople who wanted to learn the chord. They read the names on the copper lids, sang the three notes, and let the voices go. Some went easily. Some fought. Some asked to stay. The shelves were still full.
 
-The Tenders kept the lanterns and the rites, because a town needs ceremonies, but the Tending became a season of singing, four times a year, when anyone who wanted stood in the basin and made the chord. It was always imperfect. Someone was always flat. The children made up words. It was, Wren thought, the first honest sound the valley had made in four hundred years.
+The Tenders kept the lanterns and rites, because a town needs ceremonies, but the Tending became a season of singing, four times a year, when anyone who wanted stood in the basin and made the chord. It was always imperfect. Someone was always flat. The children made up words. It was the first honest sound the valley had made in four hundred years.
 
 She wrote a letter, and left it in the Listening House, on the shelf with her mother's notebooks.
 
@@ -691,15 +704,15 @@ She wrote a letter, and left it in the Listening House, on the shelf with her mo
 
 *If you are reading this, you can hear the undertone. You are not mad. You are not cursed. You are a Listener, and the valley has been waiting for you.*
 
-*The Note is gone. The bell is cracked. The Hush is thinner, but it is not gone; it is a debt, and we are still paying it. The voices are still coming home. Some of them are angry, and some of them are lost, and some of them have learned to sing again. The Undersong is open. The door under the north terrace is not locked.*
+*The Note is gone. The bell is cracked. The Hush is thinner, but not gone; it is a debt, and we are still paying it. The voices are still coming home, some angry, some lost, some learning to sing again. The Undersong is open. The door under the north terrace is not locked.*
 
 *There are three things I could not do.*
 
-*I could not find my mother. She went into the Hush to give the voices back, and she is still there, or she is not, and I have stopped being able to tell the difference. If you find her, tell her I put her in the reeds, not the bell. Tell her the valley sang.*
+*I could not find my mother. She went into the Hush to give the voices back, and she is still there, or she is not, and I have stopped being able to tell. If you find her, tell her I put her in the reeds, not the bell. Tell her the valley sang.*
 
-*I could not answer the question the Cantors asked, the one that broke them. What do we owe the dead? I think the answer is: not everything. Not our whole lives. Not the next child. Enough to remember them, and not so much that we stop living. I think that is the chord. I am not sure. I am still learning.*
+*I could not answer the question that broke the Cantors. What do we owe the dead? Not everything. Not our whole lives. Not the next child. Enough to remember them, and not so much that we stop living. I think that is the chord. I am still learning.*
 
-*The quarry is open again. The Guild found something under the deep shaft, a door with a bell on it, and Sable says it should be left alone, and Brannoc says it should be opened, and they are both right, which is the worst kind of argument.*
+*The quarry is open again. The Guild found a door under the deep shaft, with a bell on it. Sable says leave it. Brannoc says open it. They are both right, which is the worst kind of argument.*
 
 *Come down the road. The gate is open. The ferry runs. The kettle-birds are arguing.*
 
