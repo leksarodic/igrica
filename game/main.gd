@@ -207,6 +207,42 @@ func _build_diorama() -> void:
 	tower.position = Vector3(-14, 0, -22)
 	add_child(tower)
 
+	# A small static diorama of the town, so the title is a view of the place.
+	var houses := [
+		[-2.0, -8.0, 0.4, 4.2, 3.4, 2.8], [-24.0, -10.0, 1.2, 5.0, 4.0, 3.2],
+		[5.0, -17.0, -0.5, 4.0, 3.2, 2.6], [-9.0, -27.0, 0.2, 5.2, 4.2, 3.0],
+		[13.0, -8.0, -1.1, 3.8, 3.0, 2.5],
+	]
+	for h in houses:
+		var mi := MeshInstance3D.new()
+		mi.mesh = MeshFactory.house(h[3], h[4], h[5], Palette.OCHRE.lightened(0.06), Palette.ROOF)
+		mi.position = Vector3(h[0], 0, h[1])
+		mi.rotation.y = h[2]
+		add_child(mi)
+	for i in 6:
+		var t := MeshInstance3D.new()
+		t.mesh = MeshFactory.tree_mesh(700 + i)
+		var tx := -30.0 + i * 11.0
+		var tz := 6.0 - (i % 3) * 14.0
+		t.position = Vector3(tx, 0, tz)
+		add_child(t)
+	for i in 10:
+		var r := MeshInstance3D.new()
+		r.mesh = MeshFactory.reed_cluster_mesh(800 + i)
+		r.position = Vector3(-6.0 + i * 1.4, 0, 4.0 + sin(i) * 1.2)
+		add_child(r)
+	var water := MeshInstance3D.new()
+	var wp := PlaneMesh.new()
+	wp.size = Vector2(70, 40)
+	water.mesh = wp
+	water.position = Vector3(0, 0.02, -42)
+	var wshader := load("res://assets/shaders/water.gdshader") as Shader
+	if wshader != null:
+		var wm := ShaderMaterial.new()
+		wm.shader = wshader
+		water.material_override = wm
+	add_child(water)
+
 	for i in 9:
 		var post := MeshInstance3D.new()
 		var pm := BoxMesh.new()
