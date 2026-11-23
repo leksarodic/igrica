@@ -1,0 +1,677 @@
+{
+  "wren_arrival": {
+    "start": "start",
+    "nodes": {
+      "start": {
+        "speaker": "Wren",
+        "text": "You're the one who came down the road. I heard you before I saw you.",
+        "next": "ask"
+      },
+      "ask": {
+        "speaker": "Wren",
+        "text": "The valley's been waiting for someone who can hear it. I'm Wren. I used to be the only one.",
+        "choices": [
+          {
+            "text": "What is this place?",
+            "next": "place"
+          },
+          {
+            "text": "I heard a note under the wind.",
+            "next": "note"
+          },
+          {
+            "text": "I'm just passing through.",
+            "next": "passing"
+          }
+        ]
+      },
+      "place": {
+        "speaker": "Wren",
+        "text": "Carrow Vale. A town in a dry waterfall, a bell that cracked twelve years ago, and a great deal of water that has opinions. It's home, if you're lucky.",
+        "next": "ask2"
+      },
+      "note": {
+        "speaker": "Wren",
+        "text": "So did I. Most people call it the wind. It isn't. It's the valley holding a note it doesn't have the breath for anymore. Come with me and I'll show you where it lives.",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "heard_note",
+            "value": true
+          }
+        ],
+        "next": "ask2"
+      },
+      "passing": {
+        "speaker": "Wren",
+        "text": "Everyone says that. The valley has a way of making a road feel like a decision. Stay for tea, at least. Pell will never forgive me if I let a Listener go without feeding them.",
+        "next": "ask2"
+      },
+      "ask2": {
+        "speaker": "Wren",
+        "text": "Two things before you decide anything. The quarry has opened a door that should have stayed shut, and the Returning are walking the west road. Neither is an accident.",
+        "choices": [
+          {
+            "text": "What are the Returning?",
+            "next": "returning"
+          },
+          {
+            "text": "What door?",
+            "next": "door"
+          },
+          {
+            "text": "Where should I start?",
+            "next": "start_point"
+          }
+        ]
+      },
+      "returning": {
+        "speaker": "Wren",
+        "text": "Voices that came home after the bell cracked. Most of them found rest. Some didn't. They look like colour moving against the wind, and they are not dangerous unless you answer them.",
+        "next": "start_point"
+      },
+      "door": {
+        "speaker": "Wren",
+        "text": "A Cantor seal under the deep shaft. It has a bell on it, and the bell has started ringing. The Guild says it's a maintenance signal. Sable says it's a warning. They're both right.",
+        "next": "start_point"
+      },
+      "start_point": {
+        "speaker": "Wren",
+        "text": "The Listening House. Pell keeps the archive, and the tea. Tell him I sent you. And Listener — don't answer anything that knows your name.",
+        "effects": [
+          {
+            "type": "quest",
+            "id": "main_01",
+            "stage": 1
+          },
+          {
+            "type": "lore",
+            "id": "welcome_to_carrow"
+          }
+        ],
+        "end": true
+      }
+    }
+  },
+  "wren_hub": {
+    "start": "start",
+    "nodes": {
+      "start": {
+        "speaker": "Wren",
+        "text": "Still here. Good. The valley has a way of sorting people into those who stay and those who were just passing through.",
+        "choices": [
+          {
+            "text": "Tell me about the bell.",
+            "next": "bell"
+          },
+          {
+            "text": "Tell me about your mother.",
+            "next": "mira",
+            "condition": "flag:met_pell"
+          },
+          {
+            "text": "What did Sable do?",
+            "next": "sable",
+            "condition": "quest:main_01>=2"
+          },
+          {
+            "text": "I should go.",
+            "next": "bye"
+          }
+        ]
+      },
+      "bell": {
+        "speaker": "Wren",
+        "text": "It held a note for four hundred years. We fed it people and called it maintenance. Then my mother found a chord, and I rang the bell open, and now we sing for ourselves four times a year. Badly. It's the best thing this town has ever done.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "the_long_note"
+          }
+        ],
+        "next": "start"
+      },
+      "mira": {
+        "speaker": "Wren",
+        "text": "She was the best listener in the valley and the worst at leaving things alone. She went into the Hush to give the voices back. Some days I think she's still there. Some days I think that's just what grief does to a person with good ears.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "mira_alk"
+          }
+        ],
+        "next": "start"
+      },
+      "sable": {
+        "speaker": "Wren",
+        "text": "She kept the Note fed for thirty years. She fed my brother to it. She also rang the giving stroke when it mattered, and lost her hearing for it. I don't forgive her. I bring her bread. Both are true.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "sable_voss"
+          }
+        ],
+        "next": "start"
+      },
+      "bye": {
+        "speaker": "Wren",
+        "text": "Go on, then. The valley will wait.",
+        "end": true
+      }
+    }
+  },
+  "pell_hub": {
+    "start": "start",
+    "nodes": {
+      "start": {
+        "speaker": "Pell",
+        "text": "Ah. The new Listener. Wren said you'd come. She also said you'd be taller. Sit. The tea is terrible, but it is warm, which is the more important quality in tea.",
+        "next": "ask"
+      },
+      "ask": {
+        "speaker": "Pell",
+        "text": "Ask me something. I have six hundred years of records and a memory that leaks like a roof, so we should both lower our expectations.",
+        "choices": [
+          {
+            "text": "What is the Quarry Door?",
+            "next": "door"
+          },
+          {
+            "text": "What happened to the Cantors?",
+            "next": "cantors"
+          },
+          {
+            "text": "Tell me about the Hush.",
+            "next": "hush"
+          },
+          {
+            "text": "Do you have any hints for me?",
+            "next": "hints"
+          },
+          {
+            "text": "Nothing for now.",
+            "next": "bye"
+          }
+        ]
+      },
+      "door": {
+        "speaker": "Pell",
+        "text": "A reliquary. The Cantors sealed it from the inside when they stopped speaking. It holds a tuning floor, a First Bell that has never been rung, and quite possibly the reason they stopped. The Guild opened it because it was there. I would have opened it too, at their age. That is not a defence.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "quarry_door"
+          },
+          {
+            "type": "quest",
+            "id": "main_01",
+            "stage": 2
+          },
+          {
+            "type": "flag",
+            "key": "met_pell",
+            "value": true
+          }
+        ],
+        "next": "ask"
+      },
+      "cantors": {
+        "speaker": "Pell",
+        "text": "They tuned the valley like an instrument, then discovered that a voice could hold a note. The first gifts were volunteers. The last were not. When they could not live with it, they stopped speaking and walked into the dark. The records call it the Long Silence. I call it the only honest thing they ever did.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "the_cantors"
+          }
+        ],
+        "next": "ask"
+      },
+      "hush": {
+        "speaker": "Pell",
+        "text": "Not a place. A debt. Every voice taken and not returned leaves a shape behind, and the shapes gather. You can pay it back, one name at a time, with the chord. You cannot close it with a wall. We tried that for four hundred years.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "the_hush"
+          }
+        ],
+        "next": "ask"
+      },
+      "hints": {
+        "speaker": "Pell",
+        "text": "Use Listen when a place feels wrong. Read the carvings; the Cantors could not say anything without building it first. And if a stone wants three notes, sing it three notes. They were not subtle people.",
+        "next": "ask"
+      },
+      "bye": {
+        "speaker": "Pell",
+        "text": "Go on. The archive will still be here, mouldering gently. If you find a jar with a name on it, bring it back. If you find a jar without a name, leave it alone.",
+        "end": true
+      }
+    }
+  },
+  "sable_hub": {
+    "start": "start",
+    "nodes": {
+      "start": {
+        "speaker": "Sable",
+        "text": "You are the new Listener. Wren is delighted. I am reserving judgement, which at my age is a form of optimism.",
+        "choices": [
+          {
+            "text": "The north channel is choked. What do you need?",
+            "next": "chime",
+            "condition": "flag:met_pell"
+          },
+          {
+            "text": "Why did you keep the Note fed?",
+            "next": "why"
+          },
+          {
+            "text": "What happens if the Quarry Door stays open?",
+            "next": "door"
+          },
+          {
+            "text": "I'll come back.",
+            "next": "bye"
+          }
+        ]
+      },
+      "chime": {
+        "speaker": "Sable",
+        "text": "The Choir Chime. A Cantor tuning bell in the Sunken Choir. It keeps the channel clear. It has gone silent, which means something in the shrine is holding it, and something in the shrine is probably a Stag. Nissa can get you there. Take her.",
+        "effects": [
+          {
+            "type": "quest",
+            "id": "main_02",
+            "stage": 0
+          },
+          {
+            "type": "lore",
+            "id": "sunken_choir"
+          }
+        ],
+        "next": "start"
+      },
+      "why": {
+        "speaker": "Sable",
+        "text": "Because the Hush took four houses in one night and I had a jar with a boy's voice in it. Because I was thirty and certain. Because no one else would do the arithmetic, and I told myself that was courage. It was not. It was a door I held shut with people.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "the_harvests"
+          }
+        ],
+        "next": "start"
+      },
+      "door": {
+        "speaker": "Sable",
+        "text": "If it is a maintenance signal, we should maintain it. If it is a warning, we should listen. The Guild hears only the first, and I hear only the second. You are the one with the good ears. Go and find out which of us is lying.",
+        "next": "start"
+      },
+      "bye": {
+        "speaker": "Sable",
+        "text": "The valley will wait. It is very good at that.",
+        "end": true
+      }
+    }
+  },
+  "nissa_ferry": {
+    "start": "start",
+    "nodes": {
+      "start": {
+        "speaker": "Nissa",
+        "text": "You're the new Listener. Wren's been talking about you to anyone who stands still long enough. Don't worry, she does it affectionately.",
+        "choices": [
+          {
+            "text": "The channel is choked. Can you take me across?",
+            "next": "choke"
+          },
+          {
+            "text": "The north dock is falling apart.",
+            "next": "dock"
+          },
+          {
+            "text": "Tell me about the Reedfolk.",
+            "next": "reedfolk"
+          },
+          {
+            "text": "Who is the Hollow Stag?",
+            "next": "stag",
+            "condition": "flag:met_pell"
+          },
+          {
+            "text": "I'll come back.",
+            "next": "bye"
+          }
+        ]
+      },
+      "choke": {
+        "speaker": "Nissa",
+        "text": "I can take you across, but the choke will just fill again. We need the Choir Chime, and the Choir Chime is in a drowned shrine full of things that have opinions. First, though, I need a resonance fork. Brannoc can make one if you bring him copper, resin, and a humstone shard.",
+        "effects": [
+          {
+            "type": "quest",
+            "id": "main_02",
+            "stage": 1
+          },
+          {
+            "type": "trust",
+            "id": "nissa",
+            "amount": 1
+          },
+          {
+            "type": "flag",
+            "key": "nissa_joined",
+            "value": true
+          }
+        ],
+        "next": "join"
+      },
+      "join": {
+        "speaker": "Nissa",
+        "text": "I'm coming with you. Not because you need a babysitter, though you might. Because this is my channel, and I'm tired of watching it die politely.",
+        "effects": [
+          {
+            "type": "companion",
+            "id": "nissa",
+            "active": true
+          },
+          {
+            "type": "quest_done",
+            "id": "main_01",
+            "outcome": "ferry"
+          }
+        ],
+        "end": true
+      },
+      "reedfolk": {
+        "speaker": "Nissa",
+        "text": "We move with the water. We put our dead in the reeds, not the bell. The Tenders think we're romantic. We think they're frightened. Both are true, but ours smells better.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "reedfolk"
+          }
+        ],
+        "next": "start"
+      },
+      "stag": {
+        "speaker": "Nissa",
+        "text": "A guardian the Cantors left in the Choir. It was supposed to keep the water clean. Now it keeps everything, including the silence. Don't fight it until you've read the window.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "hollow_stag"
+          }
+        ],
+        "next": "start"
+      },
+      "bye": {
+        "speaker": "Nissa",
+        "text": "Go on. The ferry will be here. I'll be here. It's a whole thing.",
+        "end": true
+      },
+      "dock": {
+        "speaker": "Nissa",
+        "text": "It needs four bundles of hum-reed and two pots of resin. I'd do it myself, but I'm busy being indispensable. Repair it at the landing and the winter crossing will hold.",
+        "effects": [
+          {
+            "type": "quest",
+            "id": "side_ferry",
+            "stage": 1
+          }
+        ],
+        "next": "start"
+      }
+    }
+  },
+  "brannoc_foundry": {
+    "start": "start",
+    "nodes": {
+      "start": {
+        "speaker": "Brannoc",
+        "text": "You're the new Listener. Wren's ears, a stranger's coat. I'm Brannoc. This is Pip. She will steal your buttons and deny everything.",
+        "choices": [
+          {
+            "text": "I need a resonance fork.",
+            "next": "fork"
+          },
+          {
+            "text": "What is humstone?",
+            "next": "humstone"
+          },
+          {
+            "text": "Do you know anything about Pip's bell?",
+            "next": "pip"
+          },
+          {
+            "text": "I'll come back.",
+            "next": "bye"
+          },
+          {
+            "text": "I found your copper bell.",
+            "next": "bell_found",
+            "condition": "quest:side_pip>=2"
+          }
+        ]
+      },
+      "fork": {
+        "speaker": "Brannoc",
+        "text": "Mira's pattern. I still have it. Three copper, two resin, one humstone shard. The shard is the hard part; the deep quarry has plenty, if you don't mind the stone singing at you. Use my bench when you have it.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "resonance_fork"
+          },
+          {
+            "type": "flag",
+            "key": "fork_recipe_known",
+            "value": true
+          }
+        ],
+        "next": "start"
+      },
+      "humstone": {
+        "speaker": "Brannoc",
+        "text": "The singing stone. Cut it right and it remembers a voice. Cut it wrong and it remembers the whole quarry falling on your head. The Cantors built a valley out of it. We build hinges.",
+        "effects": [
+          {
+            "type": "lore",
+            "id": "humstone"
+          }
+        ],
+        "next": "start"
+      },
+      "pip": {
+        "speaker": "Brannoc",
+        "text": "She's taken my good copper bell to the old dovecote on the east terrace. If you bring her a hum-reed she'll trade. Kettle-birds are many things, but they are not unreasonable.",
+        "effects": [
+          {
+            "type": "quest",
+            "id": "side_pip",
+            "stage": 1
+          }
+        ],
+        "next": "start"
+      },
+      "bye": {
+        "speaker": "Brannoc",
+        "text": "Mind the furnace. And if a bell tells you its name, don't answer. That's not a joke.",
+        "end": true
+      },
+      "bell_found": {
+        "speaker": "Brannoc",
+        "text": "You argued with a kettle-bird and won. I'm not sure whether to be proud or alarmed. Here — take this. It's a copper bell with a crack in it. The crack makes it honest.",
+        "effects": [
+          {
+            "type": "quest_done",
+            "id": "side_pip",
+            "outcome": "bell"
+          },
+          {
+            "type": "trust",
+            "id": "brannoc",
+            "amount": 1
+          },
+          {
+            "type": "marks",
+            "amount": 15
+          }
+        ],
+        "next": "start"
+      }
+    }
+  },
+  "stag_choice": {
+    "start": "start",
+    "nodes": {
+      "start": {
+        "speaker": "Sable",
+        "text": "The chime warms in your hand. Sable's voice arrives through it, thin and tired: 'You found it. The channel can run clear by tomorrow, if we put it back where it belongs.'",
+        "next": "ask"
+      },
+      "ask": {
+        "speaker": "Sable",
+        "text": "The Tenders will use it to keep the old order. The Reedfolk will set it in the open and let the water find its own way. I will not pretend the choice is simple.",
+        "choices": [
+          {
+            "text": "Give it to the Tenders.",
+            "next": "tenders",
+            "effects": [
+              {
+                "type": "flag",
+                "key": "chime_chosen",
+                "value": true
+              }
+            ]
+          },
+          {
+            "text": "Give it to the Reedfolk.",
+            "next": "reedfolk",
+            "effects": [
+              {
+                "type": "flag",
+                "key": "chime_chosen",
+                "value": true
+              }
+            ]
+          },
+          {
+            "text": "Keep it for the road.",
+            "next": "keep",
+            "effects": [
+              {
+                "type": "flag",
+                "key": "chime_chosen",
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      "tenders": {
+        "speaker": "Sable",
+        "text": "Then the channel runs clear, and the town eats, and the Reedfolk lose their winter crossing. We will owe them. I will write it down.",
+        "effects": [
+          {
+            "type": "choice",
+            "id": "chime_choice",
+            "value": "tenders"
+          },
+          {
+            "type": "trust",
+            "id": "sable",
+            "amount": 1
+          },
+          {
+            "type": "quest_done",
+            "id": "main_02",
+            "outcome": "tenders"
+          }
+        ],
+        "end": true
+      },
+      "reedfolk": {
+        "speaker": "Sable",
+        "text": "Then the water goes where it wants, and the market thins, and Nissa will smile at me for a year. Perhaps that is worth a thin market.",
+        "effects": [
+          {
+            "type": "choice",
+            "id": "chime_choice",
+            "value": "reedfolk"
+          },
+          {
+            "type": "trust",
+            "id": "nissa",
+            "amount": 2
+          },
+          {
+            "type": "quest_done",
+            "id": "main_02",
+            "outcome": "reedfolk"
+          }
+        ],
+        "end": true
+      },
+      "keep": {
+        "speaker": "Sable",
+        "text": "A Listener with a bell. That has never gone badly. Take it, then. But you will hear it at night, and you will have to decide what it is telling you.",
+        "effects": [
+          {
+            "type": "choice",
+            "id": "chime_choice",
+            "value": "keep"
+          },
+          {
+            "type": "item",
+            "id": "echo_chime",
+            "count": 1
+          },
+          {
+            "type": "quest_done",
+            "id": "main_02",
+            "outcome": "keep"
+          }
+        ],
+        "end": true
+      }
+    }
+  },
+  "sable_after": {
+    "start": "start",
+    "nodes": {
+      "start": {
+        "speaker": "Sable",
+        "text": "The channel is clear. The valley will argue about how for another year, which is the most alive it has been in decades.",
+        "choices": [
+          {
+            "text": "What happens to the Chime now?",
+            "next": "chime"
+          },
+          {
+            "text": "Are you all right?",
+            "next": "allright"
+          },
+          {
+            "text": "I should go.",
+            "next": "bye"
+          }
+        ]
+      },
+      "chime": {
+        "speaker": "Sable",
+        "text": "It will be where it was put. The Tenders will care for it, the Reedfolk will resent it, and the water will do what water does. That is the shape of a functioning valley.",
+        "next": "start"
+      },
+      "allright": {
+        "speaker": "Sable",
+        "text": "I am seventy years old, deaf, and still being asked for advice. I am better than I deserve. Go and listen to something.",
+        "next": "start"
+      },
+      "bye": {
+        "speaker": "Sable",
+        "text": "The valley will wait.",
+        "end": true
+      }
+    }
+  }
+}

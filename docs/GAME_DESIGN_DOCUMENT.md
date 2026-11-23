@@ -373,8 +373,28 @@ The game has no external notifications of any kind. It never asks the player to 
 | Skills | 18 | 8 |
 | Recipes | 24 | 10 |
 | Buildables | 6 | 5 |
-| Puzzles | 8 families, ~20 instances | 4 instances across 3 families |
-| Platforms | macOS, iPhone | macOS shipped; iPhone export configured and export-validated as far as signing allows |
+| Puzzles | 8 families, ~20 instances | 4 instances across 4 families (gate, sluice, echo gallery, boss window) |
+| Platforms | macOS, iPhone | macOS app exported and booted; iPhone Xcode project generated, unsigned device build succeeded; signing/device run pending credentials |
 | Co-op | designed | not shipped |
 
 The build is an honest, polished vertical slice plus the shared architecture the rest of the game needs. Nothing in this table is claimed as complete unless it works and is tested; see `README.md` and `docs/PLAYTESTING.md`.
+
+### 14.1 Delivered in this build
+
+- Bellhollow hub: 196 placed objects, 8 named NPCs, 12 houses, foundry, Listening House, tower yard, dock, lit lanterns, pickups, signs, path, well, market, banners.
+- Reedwater: water shader, boardwalk ferry landing, choke, Cantor survey stone, Chime Gate, Sunken Choir entrance, six enemies, Reedfolk NPCs, optional side-cave entrance.
+- Sunken Choir: entrance, nave, sluice, echo gallery, boss arena, altar, four rooms with collision, lit lamps, lore signs, Stone Sentinel, Hollow Stag.
+- Procedural side-cave with seeded rooms, resources, enemies, and a chord gate.
+- Player: movement, sprint, dodge with i-frames, weapon-specific light/heavy attacks, pitch bonuses, poise, damage, death/respawn, water slowdown, Listen pulse.
+- Combat: Reed Crawler, Bramble Ram, Choir Moth, Stone Sentinel, Returning Wisp, Hollow Stag with shell puzzle.
+- Nissa: persistent companion, follow/engage/wait, tracing shots, True Pitch, barks.
+- Story: Wren/Pell/Sable/Nissa/Brannoc/Stag choice dialogues, two main quests, two side activities, three recorded outcomes.
+- Systems: inventory, equipment, crafting (UI + logic), skills, journal/lore/echoes, party, map, settings, building with five structures and persistence.
+- Save/sync: atomic checksummed saves, backups, quarantine, autosave, manual slots, explicit device handoff, conflict preservation, export/import packages.
+- UI: title, character sheet, HUD, dialogue, pause notebook, six screens, touch HUD, boss bar, ending screen.
+- Audio: procedural synth, generative music beds, ambience, combat and UI cues.
+- macOS export and iOS Xcode generation/build validation.
+
+### 14.2 Deliberately not in this build
+
+Glasswood, the Quarry Door dungeon, the Undersong Vault, the Hush, the Low Water, chapters 3–7, the full ending set, co-op networking, signed iPhone distribution, voice acting, localization, full remapping/haptics. These are designed in this document and the story bible, not faked in the build.

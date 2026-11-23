@@ -1,0 +1,42 @@
+{
+  "lantern_post": {
+    "name": "Lantern Post",
+    "kit": "lantern_post_kit",
+    "kind": "lantern",
+    "terrain": "land",
+    "clearance": 1.2,
+    "description": "A warm light and a safe place to stop. Lights the map a little."
+  },
+  "camp": {
+    "name": "Camp",
+    "kit": "camp_kit",
+    "kind": "camp",
+    "terrain": "land",
+    "clearance": 2.2,
+    "description": "Rest, heal, and save. Nissa will have something to say."
+  },
+  "resonator": {
+    "name": "Resonator",
+    "kit": "resonator_kit",
+    "kind": "resonator",
+    "terrain": "any",
+    "clearance": 1.0,
+    "description": "A tuned stone that holds one note. Resonators can wake hidden things."
+  },
+  "reed_bridge": {
+    "name": "Reed Bridge",
+    "kit": "reed_bridge_kit",
+    "kind": "bridge",
+    "terrain": "water",
+    "clearance": 1.0,
+    "description": "A permanent crossing over a channel or gap."
+  },
+  "songbed": {
+    "name": "Songbed",
+    "kit": "songbed_kit",
+    "kind": "songbed",
+    "terrain": "land",
+    "clearance": 1.8,
+    "description": "Planted reeds and copper wire. Ground that has been given a song again."
+  }
+}

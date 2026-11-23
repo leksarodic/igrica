@@ -1,0 +1,107 @@
+{
+  "bellhollow": {
+    "name": "Bellhollow",
+    "subtitle": "The town in the dry basin",
+    "mood": "town",
+    "music": "working",
+    "ambient": "bellhollow",
+    "sun_color": "#ffd9a0",
+    "sun_energy": 1.15,
+    "fog_color": "#6f8b8d",
+    "fog_density": 0.004,
+    "sky_top": "#2e3d42",
+    "sky_horizon": "#d8a45c",
+    "grass": "#8a7c48",
+    "stone": "#b8a98c",
+    "spawns": [
+      "arrival",
+      "listening_house",
+      "ferry_dock",
+      "foundry",
+      "west_gate"
+    ]
+  },
+  "reedwater": {
+    "name": "Reedwater",
+    "subtitle": "The north channel",
+    "mood": "water",
+    "music": "surface",
+    "ambient": "reedwater",
+    "sun_color": "#ffd09a",
+    "sun_energy": 1.2,
+    "fog_color": "#8aa0a0",
+    "fog_density": 0.006,
+    "sky_top": "#3a5058",
+    "sky_horizon": "#e2b46a",
+    "grass": "#7f8a52",
+    "stone": "#aeb0a0",
+    "spawns": [
+      "dock",
+      "north_channel",
+      "choir_entrance",
+      "reed_camp",
+      "kestrel_shelf"
+    ]
+  },
+  "sunken_choir": {
+    "name": "The Sunken Choir",
+    "subtitle": "A shrine built for listening",
+    "mood": "dungeon",
+    "music": "hollow",
+    "ambient": "undersong",
+    "sun_color": "#9fb6b4",
+    "sun_energy": 0.35,
+    "fog_color": "#2b3b3e",
+    "fog_density": 0.035,
+    "sky_top": "#101a1c",
+    "sky_horizon": "#254043",
+    "grass": "#3d5a52",
+    "stone": "#b7b5a6",
+    "spawns": [
+      "entrance",
+      "nave",
+      "sluice",
+      "echo_maze",
+      "stagger_window",
+      "altar"
+    ]
+  },
+  "kestrel_shelf": {
+    "name": "Kestrel Shelf",
+    "subtitle": "The old quarry road",
+    "mood": "cliff",
+    "music": "surface",
+    "ambient": "cliffs",
+    "sun_color": "#ffe0b0",
+    "sun_energy": 1.3,
+    "fog_color": "#9aa8a8",
+    "fog_density": 0.014,
+    "sky_top": "#33474f",
+    "sky_horizon": "#d9b070",
+    "grass": "#8c8458",
+    "stone": "#cac4b2",
+    "spawns": [
+      "trailhead",
+      "cave_mouth",
+      "overlook"
+    ]
+  },
+  "undercave": {
+    "name": "Undersong Side-Cave",
+    "subtitle": "A passage the valley forgot",
+    "mood": "cave",
+    "music": "hollow",
+    "ambient": "undersong",
+    "sun_color": "#8aa8a2",
+    "sun_energy": 0.2,
+    "fog_color": "#1c2a2c",
+    "fog_density": 0.05,
+    "sky_top": "#081011",
+    "sky_horizon": "#1a2e30",
+    "grass": "#35524a",
+    "stone": "#a9a696",
+    "spawns": [
+      "entrance"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "resonance_fork": {
+    "output": "resonance_fork",
+    "count": 1,
+    "station": "bench",
+    "cost": { "copper_scrap": 3, "resin": 2, "humstone_shard": 1 },
+    "known": true,
+    "description": "Mira's field fork. Needed to read the Chime Gate."
+  },
+  "reed_tonic": {
+    "output": "reed_tonic",
+    "count": 1,
+    "station": "any",
+    "cost": { "hum_reed": 1, "resin": 1 },
+    "known": true,
+    "description": "A bitter green restorative."
+  },
+  "clear_water": {
+    "output": "clear_water",
+    "count": 1,
+    "station": "any",
+    "cost": { "hum_reed": 2, "river_clay": 1 },
+    "known": false,
+    "description": "Cold, clean, and better than it sounds."
+  },
+  "reedweave_cloak": {
+    "output": "reedweave_cloak",
+    "count": 1,
+    "station": "bench",
+    "cost": { "hum_reed": 4, "resin": 2, "river_clay": 1 },
+    "known": true,
+    "description": "A light cloak for water and long walks."
+  },
+  "chime_staff": {
+    "output": "chime_staff",
+    "count": 1,
+    "station": "bench",
+    "cost": { "copper_scrap": 3, "humstone_shard": 2, "resin": 1 },
+    "known": false,
+    "description": "A surveyor's weapon, rebuilt."
+  },
+  "lantern_post_kit": {
+    "output": "lantern_post_kit",
+    "count": 1,
+    "station": "bench",
+    "cost": { "copper_scrap": 2, "resin": 1, "hum_reed": 2 },
+    "known": true,
+    "description": "Build a lantern post."
+  },
+  "camp_kit": {
+    "output": "camp_kit",
+    "count": 1,
+    "station": "bench",
+    "cost": { "hum_reed": 3, "river_clay": 1, "resin": 1 },
+    "known": true,
+    "description": "Build a camp."
+  },
+  "resonator_kit": {
+    "output": "resonator_kit",
+    "count": 1,
+    "station": "bench",
+    "cost": { "copper_scrap": 2, "humstone_shard": 1, "hum_reed": 1 },
+    "known": false,
+    "description": "Build a resonator."
+  },
+  "reed_bridge_kit": {
+    "output": "reed_bridge_kit",
+    "count": 1,
+    "station": "bench",
+    "cost": { "hum_reed": 4, "resin": 2 },
+    "known": true,
+    "description": "Build a reed bridge."
+  },
+  "songbed_kit": {
+    "output": "songbed_kit",
+    "count": 1,
+    "station": "bench",
+    "cost": { "hum_reed": 3, "glassgrass_fibre": 1, "river_clay": 1 },
+    "known": false,
+    "description": "Plant a songbed."
+  },
+  "upgrade_weapon_1": {
+    "output": "upgrade_weapon",
+    "count": 1,
+    "station": "bench",
+    "cost": { "copper_scrap": 2, "humstone_shard": 1 },
+    "known": true,
+    "description": "Reinforce the equipped weapon (+1)."
+  },
+  "upgrade_cloak_1": {
+    "output": "upgrade_cloak",
+    "count": 1,
+    "station": "bench",
+    "cost": { "hum_reed": 2, "resin": 2 },
+    "known": true,
+    "description": "Repair and reinforce the equipped cloak (+1)."
+  }
+}

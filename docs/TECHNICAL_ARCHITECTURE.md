@@ -213,7 +213,7 @@ Each snapshot carries `device.id`, `device.name`, `revision` (monotonic per devi
 | Adapter | Use | Status |
 |---|---|---|
 | `LocalFolderAdapter` | Default; a user-chosen folder (iCloud Drive, external drive, network share, Files app on iOS). | Implemented |
-| `ICloudDriveAdapter` | Detects the app's iCloud ubiquity container on macOS/iOS via the native bridge and uses it as the sync root. | Implemented with fallback; requires signed build + iCloud capability |
+| `ICloudDriveAdapter` | Detects the app's iCloud ubiquity container on macOS/iOS and uses it as the sync root. | macOS iCloud Drive path verified; iOS container path implemented with local fallback, requires signed build + iCloud capability (unverified) |
 | `DeviceTransferAdapter` | Explicit export/import of a `.longnote` package for AirDrop or cable. | Implemented |
 
 iCloud Drive (document-based, ubiquity container) is preferred over CloudKit for this game: saves are a handful of files, the conflict semantics we need are file-level and explicit, and CloudKit's record-level sync and account requirement add complexity without improving the player experience. iCloud Drive also works with the Files app on iPhone, which gives players a transparent recovery path. The game does **not** require an account, a login, or a network connection.
@@ -268,6 +268,8 @@ Dialogue format: nodes with `id`, `speaker`, `text`, optional `choices` (text, c
 - 100% of gameplay, content, UI logic, save logic, and art generation is shared. Only input presentation, lifecycle hooks, haptics, and iCloud path discovery are platform-specific.
 
 ## 14. Testing strategy
+
+**Current results (23 November 2026):** 47 logic/save/sync checks, 45 integration checks, 36 end-to-end playthrough checks, content validation OK, macOS export booted, iOS Xcode project generated with an unsigned device build succeeding. Full details and open defects are in `docs/PLAYTESTING.md`.
 
 1. **Pure logic tests (headless, fast):** save serialization/checksum/atomicity, migrations, sync conflict matrix, inventory/equipment rules, crafting, quest state machines, puzzle solvers, dialogue conditions, procedural cave invariants, damage math, AI utility scoring.
 2. **Scene integration tests (headless):** boot world, simulate player input via `Input.action_press`, complete the quest chain with scripted interactions, verify save/load round-trip including world flags, run the boss arena with an invulnerable test player to validate phase transitions.

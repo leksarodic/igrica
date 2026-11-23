@@ -1,0 +1,58 @@
+{
+  "hushstep": {
+    "name": "Hushstep",
+    "arc": "reed",
+    "cost": 18,
+    "cooldown": 4.0,
+    "description": "A quick step that leaves a fading tone where you stood. Brief invulnerability."
+  },
+  "toll": {
+    "name": "Toll",
+    "arc": "chime",
+    "cost": 25,
+    "cooldown": 9.0,
+    "description": "A cone of low sound that staggers enemies and breaks guards."
+  },
+  "lantern_song": {
+    "name": "Lantern Song",
+    "arc": "chime",
+    "cost": 30,
+    "cooldown": 16.0,
+    "description": "A held note that heals you and nearby allies and pushes back the Hush."
+  },
+  "echo_mark": {
+    "name": "Echo Mark",
+    "arc": "bell",
+    "cost": 12,
+    "cooldown": 7.0,
+    "description": "Marks a target's weak point and raises your pitch match against it."
+  },
+  "reed_bind": {
+    "name": "Reed Bind",
+    "arc": "reed",
+    "cost": 22,
+    "cooldown": 12.0,
+    "description": "Reeds rise and hold a target in place for three seconds."
+  },
+  "counterpoint": {
+    "name": "Counterpoint",
+    "arc": "blade",
+    "cost": 15,
+    "cooldown": 6.0,
+    "description": "A parry that answers with a free heavy strike. Wider window than a normal parry."
+  },
+  "second_verse": {
+    "name": "Second Verse",
+    "arc": "bell",
+    "cost": 35,
+    "cooldown": 30.0,
+    "description": "Revive a downed companion with a returning note."
+  },
+  "quiet_passage": {
+    "name": "Quiet Passage",
+    "arc": "reed",
+    "cost": 20,
+    "cooldown": 20.0,
+    "description": "For a few seconds, enemies lose track of you and the Hush cannot find your name."
+  }
+}

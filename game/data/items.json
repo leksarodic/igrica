@@ -1,0 +1,260 @@
+{
+  "reed_blade": {
+    "name": "Reed Blade",
+    "kind": "weapon",
+    "mark": "blade",
+    "pitch": "mid",
+    "damage": 12.0,
+    "speed": 1.15,
+    "poise": 6.0,
+    "range": 2.2,
+    "value": 18,
+    "stats": { "stride": 0.05 },
+    "description": "A long, flexible blade of reed-steel. Light in the hand, quick to answer."
+  },
+  "quarry_maul": {
+    "name": "Quarry Maul",
+    "kind": "weapon",
+    "mark": "maul",
+    "pitch": "low",
+    "damage": 26.0,
+    "speed": 0.62,
+    "poise": 18.0,
+    "range": 2.5,
+    "value": 34,
+    "stats": { "vitality": 8.0, "stride": -0.05 },
+    "description": "A stoneworker's maul, re-hafted for something with a longer reach and worse intentions."
+  },
+  "chime_staff": {
+    "name": "Chime Staff",
+    "kind": "weapon",
+    "mark": "staff",
+    "pitch": "high",
+    "damage": 10.0,
+    "speed": 0.9,
+    "poise": 8.0,
+    "range": 6.0,
+    "ranged": true,
+    "value": 40,
+    "stats": { "ear": 2.0 },
+    "description": "A surveyor's staff with a bell at the tip. It strikes at a distance, softly, and the sound arrives twice."
+  },
+  "lantern_offhand": {
+    "name": "Reed Lantern",
+    "kind": "offhand",
+    "mark": "lantern",
+    "pitch": "high",
+    "value": 0,
+    "stats": { "ear": 1.0 },
+    "description": "A copper lantern with a reed wick. It makes the dark less certain."
+  },
+  "reed_buckler": {
+    "name": "Reed Buckler",
+    "kind": "offhand",
+    "mark": "shield",
+    "pitch": "mid",
+    "value": 22,
+    "stats": { "vitality": 10.0 },
+    "description": "Woven reed over a copper hoop. It will not stop a maul, but it will stop a mistake."
+  },
+  "echo_chime": {
+    "name": "Echo Chime",
+    "kind": "offhand",
+    "mark": "chime",
+    "pitch": "high",
+    "value": 45,
+    "stats": { "ear": 3.0 },
+    "description": "A hand chime that answers a question you did not ask. Found in the Sunken Choir."
+  },
+  "traveller_cloak": {
+    "name": "Traveller's Cloak",
+    "kind": "cloak",
+    "mark": "cloak",
+    "value": 0,
+    "stats": { "vitality": 5.0, "breath": 5.0 },
+    "description": "Wool, wax, and a patch at the shoulder. It has been rained on in three valleys."
+  },
+  "reedweave_cloak": {
+    "name": "Reedweave Cloak",
+    "kind": "cloak",
+    "mark": "cloak",
+    "value": 28,
+    "stats": { "breath": 18.0, "stride": 0.03 },
+    "description": "Reedfolk work: layered reed fibre that sheds water and keeps the wearer moving."
+  },
+  "quarry_coat": {
+    "name": "Quarry Coat",
+    "kind": "cloak",
+    "mark": "cloak",
+    "value": 36,
+    "stats": { "vitality": 22.0, "stride": -0.04 },
+    "description": "Heavy leather and stone dust. It turns a blade and slows a walk."
+  },
+  "listener_coat": {
+    "name": "Listener's Coat",
+    "kind": "cloak",
+    "mark": "cloak",
+    "value": 60,
+    "stats": { "ear": 4.0, "vitality": 6.0 },
+    "description": "Slate cloth with a copper thread at the cuff. It belonged to someone who wrote things down."
+  },
+  "river_stone": {
+    "name": "River Stone",
+    "kind": "charm",
+    "mark": "stone",
+    "value": 12,
+    "stats": { "breath": 8.0 },
+    "description": "A smooth black stone from the north channel. It is warm when the water is cold."
+  },
+  "copper_bell": {
+    "name": "Copper Bell",
+    "kind": "charm",
+    "mark": "bell",
+    "value": 20,
+    "stats": { "ear": 2.0 },
+    "description": "A thumb bell with a cracked lip. The crack makes it honest."
+  },
+  "hush_lantern": {
+    "name": "Hush Lantern",
+    "kind": "charm",
+    "mark": "lantern",
+    "value": 55,
+    "stats": { "ear": 3.0 },
+    "description": "A lantern that burns without a flame. In the Hush it shows the shape of what is missing."
+  },
+  "ferry_knot": {
+    "name": "Ferry Knot",
+    "kind": "charm",
+    "mark": "knot",
+    "value": 16,
+    "stats": { "stride": 0.08 },
+    "description": "Three knots tied by Nissa. A map, a promise, and a joke, in that order."
+  },
+  "stag_charm": {
+    "name": "Stag's Antler",
+    "kind": "charm",
+    "mark": "antler",
+    "value": 70,
+    "stats": { "vitality": 12.0, "ear": 2.0 },
+    "description": "A splinter of pale chime-stone from the Hollow Stag. It hums when you stand still."
+  },
+  "reed_tonic": {
+    "name": "Reed Tonic",
+    "kind": "consumable",
+    "mark": "vial",
+    "value": 8,
+    "effect": { "heal": 35.0 },
+    "description": "Bitter, green, and reliable. Restores health."
+  },
+  "clear_water": {
+    "name": "Clear Water",
+    "kind": "consumable",
+    "mark": "vial",
+    "value": 6,
+    "effect": { "breath": 60.0 },
+    "description": "Cold water from the north channel. Restores breath."
+  },
+  "hum_reed": {
+    "name": "Hum-Reed",
+    "kind": "material",
+    "mark": "reed",
+    "value": 2,
+    "description": "A hollow reed that keeps a note after it is cut."
+  },
+  "resin": {
+    "name": "Pine Resin",
+    "kind": "material",
+    "mark": "resin",
+    "value": 2,
+    "description": "Sticky, amber, useful. Smells like the foundry."
+  },
+  "copper_scrap": {
+    "name": "Copper Scrap",
+    "kind": "material",
+    "mark": "copper",
+    "value": 3,
+    "description": "Bent sheet and wire. The valley is held together with this."
+  },
+  "humstone_shard": {
+    "name": "Humstone Shard",
+    "kind": "material",
+    "mark": "stone",
+    "value": 6,
+    "description": "A dark chip of the singing stone. It remembers being struck."
+  },
+  "glassgrass_fibre": {
+    "name": "Glassgrass Fibre",
+    "kind": "material",
+    "mark": "fibre",
+    "value": 3,
+    "description": "Fine, sharp, and stronger than it looks. Rings when bent."
+  },
+  "river_clay": {
+    "name": "River Clay",
+    "kind": "material",
+    "mark": "clay",
+    "value": 2,
+    "description": "Grey clay from the channel bank. It holds a shape and a sound."
+  },
+  "echo_glass": {
+    "name": "Echo Glass",
+    "kind": "material",
+    "mark": "glass",
+    "value": 12,
+    "description": "A shard of Glasswood. It shows a light that is not in the room."
+  },
+  "resonance_fork": {
+    "name": "Resonance Fork",
+    "kind": "tool",
+    "mark": "fork",
+    "value": 0,
+    "description": "A field tuning fork made to Mira's pattern. It can find the chord in a stubborn stone."
+  },
+  "climber_hook": {
+    "name": "Climber's Hook",
+    "kind": "tool",
+    "mark": "hook",
+    "value": 0,
+    "description": "A short hook and a loop of rope. Marked ledges become paths."
+  },
+  "lantern_post_kit": {
+    "name": "Lantern Post Kit",
+    "kind": "build",
+    "mark": "lantern",
+    "value": 10,
+    "build": "lantern_post",
+    "description": "A post, a hook, a wick. Light a place and it remembers you."
+  },
+  "camp_kit": {
+    "name": "Camp Kit",
+    "kind": "build",
+    "mark": "camp",
+    "value": 12,
+    "build": "camp",
+    "description": "Oilcloth, a pot, and a bedroll. A place to stop."
+  },
+  "resonator_kit": {
+    "name": "Resonator Kit",
+    "kind": "build",
+    "mark": "resonator",
+    "value": 18,
+    "build": "resonator",
+    "description": "A tuned stone on a copper frame. It holds one note until you change it."
+  },
+  "reed_bridge_kit": {
+    "name": "Reed Bridge Kit",
+    "kind": "build",
+    "mark": "bridge",
+    "value": 14,
+    "build": "reed_bridge",
+    "description": "Bundled reed and rope. Enough to cross a gap that was not there yesterday."
+  },
+  "songbed_kit": {
+    "name": "Songbed Kit",
+    "kind": "build",
+    "mark": "songbed",
+    "value": 16,
+    "build": "songbed",
+    "description": "Roots, reed seed, and a copper wire. It teaches a patch of ground to sing again."
+  }
+}

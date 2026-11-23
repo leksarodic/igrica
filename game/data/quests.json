@@ -1,0 +1,102 @@
+{
+  "main_01": {
+    "title": "The Cracked Bell",
+    "giver": "wren",
+    "summary": "Twelve years after the Long Bell cracked, the valley is singing for itself \u2014 badly. A new Listener has come down the road, and the quarry has opened a door that should have stayed shut.",
+    "stages": [
+      {
+        "text": "Come down the road. Wren is waiting at the ninth switchback."
+      },
+      {
+        "text": "Walk with Wren to the Listening House."
+      },
+      {
+        "text": "Ask Pell what the Quarry Door is."
+      },
+      {
+        "text": "Meet Nissa at the ferry dock."
+      },
+      {
+        "text": "Cross to Reedwater and see what the Returning have done to the channel."
+      },
+      {
+        "text": "The valley is listening. So are you."
+      }
+    ]
+  },
+  "main_02": {
+    "title": "The Sunken Choir",
+    "giver": "sable",
+    "summary": "The north channel is choked, and the Choir Chime that keeps it clear has gone silent. Nissa needs a resonance fork and a way into the drowned shrine beneath the reeds.",
+    "stages": [
+      {
+        "text": "Speak with Sable in the tower yard about the Choir Chime."
+      },
+      {
+        "text": "Craft a resonance fork at Brannoc's bench (3 copper, 2 resin, 1 humstone)."
+      },
+      {
+        "text": "Clear the choke in the north channel with the fork."
+      },
+      {
+        "text": "Read the survey stone and open the Chime Gate."
+      },
+      {
+        "text": "Enter the Sunken Choir."
+      },
+      {
+        "text": "Lower the sluice: open, shut, open."
+      },
+      {
+        "text": "Pass the echo gallery (optional) and reach the boss door."
+      },
+      {
+        "text": "Ring the chimes in the window's order. Face the Hollow Stag."
+      },
+      {
+        "text": "Take the Choir Chime and decide where it belongs."
+      },
+      {
+        "text": "The channel runs clear. The valley has noticed."
+      }
+    ]
+  },
+  "side_pip": {
+    "title": "Pip's Bell",
+    "giver": "brannoc",
+    "summary": "Brannoc's kettle-bird has stolen a small copper bell and gone to ground in the old dovecote. Pip is not sorry.",
+    "stages": [
+      {
+        "text": "Find Pip in the kettle-bird roost on the east terrace."
+      },
+      {
+        "text": "Coax the bell away from Pip. (She will accept a hum-reed.)"
+      },
+      {
+        "text": "Return the bell to Brannoc."
+      },
+      {
+        "text": "Pip has decided you are furniture. This is an honour."
+      }
+    ]
+  },
+  "side_ferry": {
+    "title": "The Ferryman's Debt",
+    "giver": "nissa",
+    "summary": "The north dock is held together with rope and habit. Nissa owes the Reedfolk a working landing before the winter crossing.",
+    "stages": [
+      {
+        "text": "Gather 4 hum-reed and 2 resin for the dock repair."
+      },
+      {
+        "text": "Repair the north dock."
+      },
+      {
+        "text": "Tell Nissa the dock will hold."
+      },
+      {
+        "text": "The winter crossing is safe. The Reedfolk remember."
+      }
+    ]
+  }
+}
