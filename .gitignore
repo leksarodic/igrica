@@ -1,0 +1,23 @@
+# Godot
+.godot/
+game/.godot/
+game/.import/
+*.translation
+*.tmp
+export/
+build/
+dist/
+
+# macOS
+.DS_Store
+._*
+
+# Local secrets and environment
+.env
+.env.*
+!.env.example
+
+# Test artifacts
+test-results/
+*.log
+screenshots/local/
