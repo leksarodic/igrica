@@ -4,6 +4,7 @@
 
 **An original open-valley action adventure for macOS and iPhone.**
 Engine: Godot 4.7.2 · Language: GDScript · Status: playable vertical slice (0.1.0) · Offline, single-player, no notifications, no timers.
+Repository: <https://github.com/leksarodic/the-long-note>
 
 ![Bellhollow at dusk](docs/screenshots/bellhollow.png)
 

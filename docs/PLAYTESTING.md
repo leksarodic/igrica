@@ -109,6 +109,7 @@ godot --headless --path game --export-debug "macOS" build/macos/LongNote.app
 - Debug export: **succeeded**, 178 MB universal bundle; boot and capture verified.
 - Release export: **succeeded**, 163 MB universal bundle; ad-hoc signed (`codesign --sign -`) and booted; frame capture verified.
 - Bundle is **ad-hoc signed, not notarized**. Developer ID signing and notarization were not possible without credentials; the release notes explain the first-launch confirmation.
+- Release assets: macOS DMG 67.2 MB, macOS ZIP 59.5 MB, iOS Xcode ZIP 112.6 MB (uploaded sizes). The DMG checksum verified, and the app launched from the mounted DMG and captured a frame.
 
 ### iPhone
 
