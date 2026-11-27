@@ -20,8 +20,8 @@ jobs:
           $ErrorActionPreference = "Stop"
           Invoke-WebRequest -Uri "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_win64.exe.zip" -OutFile godot.zip
           Expand-Archive godot.zip -DestinationPath godot
-          $godot = (Get-ChildItem godot -Filter "Godot_v4.7.2-stable_win64.exe" | Select-Object -First 1).FullName
-          if (-not $godot) { throw "Godot executable not found" }
+          $godot = (Get-ChildItem godot -Filter "*win64_console.exe" | Select-Object -First 1).FullName
+          if (-not $godot) { throw "Godot console executable not found" }
           Invoke-WebRequest -Uri "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz" -OutFile templates.tpz
           Copy-Item templates.tpz templates.zip
           Expand-Archive templates.zip -DestinationPath templates
@@ -35,24 +35,31 @@ jobs:
         run: |
           $ErrorActionPreference = "Stop"
           New-Item -ItemType Directory -Force build/windows | Out-Null
-          $godot = Join-Path (Get-Location) "godot/Godot_v4.7.2-stable_win64.exe"
+          $godot = (Get-ChildItem godot -Filter "*win64_console.exe" | Select-Object -First 1).FullName
           & $godot --headless --path game --import
+          if ($LASTEXITCODE -ne 0) { throw "Godot import failed with exit code $LASTEXITCODE" }
           & $godot --headless --path game --export-release "Windows Desktop" "$pwd/build/windows/TheLongNote.exe"
+          if ($LASTEXITCODE -ne 0) { throw "Godot export failed with exit code $LASTEXITCODE" }
           if (-not (Test-Path "build/windows/TheLongNote.exe")) { throw "Export did not produce an exe" }
 
       - name: Smoke test on Windows
         shell: pwsh
         run: |
           $ErrorActionPreference = "Stop"
-          $logs = @()
+          $all = @()
           foreach ($region in @("bellhollow", "reedwater", "sunken_choir")) {
             Write-Host "=== $region ==="
-            $out = & "build/windows/TheLongNote.exe" --headless --quit-after 6 -- --world $region 2>&1
-            $code = $LASTEXITCODE
+            $log = Join-Path $pwd "smoke_$region.log"
+            $p = Start-Process -FilePath "build/windows/TheLongNote.exe" `
+              -ArgumentList @("--headless", "--quit-after", "6", "--", "--world", $region) `
+              -Wait -PassThru -NoNewWindow -RedirectStandardOutput $log -RedirectStandardError "$log.err"
+            if ($p.ExitCode -ne 0) { throw "Smoke test failed for $region with exit code $($p.ExitCode)" }
+            $out = @(Get-Content $log -ErrorAction SilentlyContinue) + @(Get-Content "$log.err" -ErrorAction SilentlyContinue)
             $out | Write-Host
-            if ($code -ne 0) { throw "Smoke test failed for $region with exit code $code" }
+            $all += $out
             if (($out -join "`n") -match "SCRIPT ERROR") { throw "Script error in $region" }
           }
+          $all | Out-File smoke.log
 
       - name: Package
         shell: pwsh
