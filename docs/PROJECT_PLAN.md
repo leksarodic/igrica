@@ -3,7 +3,7 @@
 **Studio:** independent, small team (creative direction, narrative, design, engineering, art, audio, QA)
 **Engine:** Godot 4.7.2
 **Targets:** macOS 13+ (Apple Silicon and Intel via universal build), iOS 16+ (iPhone 11 and newer recommended)
-**Repository:** `github.com/leksarodic/igrica`
+**Repository:** `github.com/leksarodic/the-long-note`
 
 ---
 
@@ -154,6 +154,7 @@ The ordering is deliberate: narrative and systems are specified before code; pur
 | 5 Cross-platform | Complete with signing gap | macOS export booted; iOS Xcode project generated; unsigned device build succeeded; sync tested with simulated devices |
 | 6 Expansion | Designed, not shipped | GDD scope table; story bible |
 | 7 Polish | Complete for slice, defects open | `docs/PLAYTESTING.md` records results and D1–D12 |
+| Release | macOS 0.1.0 published | DMG/ZIP, ad-hoc signed; iPhone Xcode project attached; no signed IPA |
 
 **Actual results:** content validation OK (8,996-word novella), 47 logic/save/sync tests, 47 integration tests, 36 end-to-end playthrough checks, macOS capture, iOS unsigned device build. The benchmark is 60 fps / 336 draw calls / 86.7 MB on an M3. Art, camera, audio audition, and iPhone device validation remain open (D4–D7).
 

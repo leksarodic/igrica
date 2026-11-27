@@ -5,7 +5,7 @@
 **Hardware:** Apple M3, 16 GB, macOS 27.2.1, 2560×1664 internal display
 **Engine:** Godot 4.7.2 stable (Metal 4 Forward Mobile)
 **Xcode:** iOS 27.2 SDK, iPhone 18 Pro simulator available (not used for a successful build; see limitations)
-**Repo:** `github.com/leksarodic/igrica`
+**Repo:** `github.com/leksarodic/the-long-note`
 
 This document records what was actually run, what passed, and what is still broken. It deliberately does not claim a feature is complete because a file exists.
 
@@ -106,10 +106,9 @@ godot --headless --path game --export-debug "macOS" build/macos/LongNote.app
 ./build/macos/LongNote.app/Contents/MacOS/"The Long Note" --resolution 1440x810 -- --world bellhollow --capture /tmp/exported.png
 ```
 
-- Export: **succeeded**, 178 MB debug universal bundle.
-- Boot: **succeeded**; Bellhollow built; no script errors.
-- Capture: **succeeded**; screenshot matches the editor build (data JSON and shaders included in the PCK).
-- Bundle is **unsigned**. Signing/notarization not performed.
+- Debug export: **succeeded**, 178 MB universal bundle; boot and capture verified.
+- Release export: **succeeded**, 163 MB universal bundle; ad-hoc signed (`codesign --sign -`) and booted; frame capture verified.
+- Bundle is **ad-hoc signed, not notarized**. Developer ID signing and notarization were not possible without credentials; the release notes explain the first-launch confirmation.
 
 ### iPhone
 

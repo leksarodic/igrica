@@ -12,6 +12,18 @@ Engine: Godot 4.7.2 · Language: GDScript · Status: playable vertical slice (0.
 
 ---
 
+## Download
+
+**Latest release:** <https://github.com/leksarodic/the-long-note/releases/latest>
+
+- **macOS:** `TheLongNote-0.1.0-macOS.dmg` (Apple Silicon and Intel, macOS 13+). The app is ad-hoc signed but not notarized, so macOS will ask you to confirm the first launch: right-click the app → **Open**, or run `xattr -dr com.apple.quarantine "/Applications/The Long Note.app"` once. A `.zip` of the app is also attached.
+- **iPhone:** `TheLongNote-0.1.0-iOS-Xcode.zip` contains the generated Xcode project, PCK, and frameworks. It is **not** a signed IPA; building for a device requires your Apple team and provisioning profile. See [`docs/architecture/ios_build.md`](docs/architecture/ios_build.md).
+- **Source:** the tagged source archive and the full repository are available from the release page.
+
+The release is the same build covered by the test record below: 47 logic/save/sync checks, 47 integration checks, and a 36-check end-to-end playthrough.
+
+---
+
 ## What this is
 
 *The Long Note* is an original IP: a handcrafted valley of terraced cliffs, reed water, drowned shrines, and a town built inside a dry waterfall. For four hundred years the valley was held stable by a single sustained note, fed by voices taken from people who were told it was maintenance. Twelve years before the game begins, the note was broken open and the voices went home. The valley is now learning to sing for itself — badly, and in public.
@@ -267,6 +279,8 @@ A typical session is 15–30 minutes; a longer session is possible. The game aut
 All names, characters, locations, story, dialogue, quests, 3D meshes, shaders, UI, and audio are original to this project and were created for it. No assets, music, or distinctive designs from Diablo, Minecraft, or any other game are used. The only third-party technology is the Godot engine (MIT) and Apple system fonts (used at runtime, not redistributed). See [`docs/ASSET_LICENSES.md`](docs/ASSET_LICENSES.md) and [`LICENSE.md`](LICENSE.md).
 
 The repository is public for review; the game and its content remain the property of the author. Do not redistribute the game or its assets commercially without permission.
+
+The macOS release is ad-hoc signed (not notarized). Gatekeeper’s first-launch confirmation is expected; the game itself has no installer, no service, no background agent, and no network requirement.
 
 ---
 
