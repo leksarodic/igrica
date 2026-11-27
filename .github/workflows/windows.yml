@@ -1,0 +1,65 @@
+name: Windows build
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "game/**"
+      - ".github/workflows/windows.yml"
+
+jobs:
+  build-and-smoke-test:
+    runs-on: windows-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Godot 4.7.2 and export templates
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          Invoke-WebRequest -Uri "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_win64.exe.zip" -OutFile godot.zip
+          Expand-Archive godot.zip -DestinationPath godot
+          $godot = (Get-ChildItem godot -Filter "Godot_v4.7.2-stable_win64.exe" | Select-Object -First 1).FullName
+          if (-not $godot) { throw "Godot executable not found" }
+          Invoke-WebRequest -Uri "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz" -OutFile templates.tpz
+          Copy-Item templates.tpz templates.zip
+          Expand-Archive templates.zip -DestinationPath templates
+          $templates = Join-Path $env:APPDATA "Godot/export_templates/4.7.2.stable"
+          New-Item -ItemType Directory -Force $templates | Out-Null
+          Copy-Item "templates/templates/*" $templates -Recurse -Force
+          Add-Content $env:GITHUB_PATH (Split-Path $godot)
+
+      - name: Export Windows release
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          New-Item -ItemType Directory -Force build/windows | Out-Null
+          $godot = Join-Path (Get-Location) "godot/Godot_v4.7.2-stable_win64.exe"
+          & $godot --headless --path game --import
+          & $godot --headless --path game --export-release "Windows Desktop" "$pwd/build/windows/TheLongNote.exe"
+          if (-not (Test-Path "build/windows/TheLongNote.exe")) { throw "Export did not produce an exe" }
+
+      - name: Smoke test on Windows
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $logs = @()
+          foreach ($region in @("bellhollow", "reedwater", "sunken_choir")) {
+            Write-Host "=== $region ==="
+            $out = & "build/windows/TheLongNote.exe" --headless --quit-after 6 -- --world $region 2>&1
+            $code = $LASTEXITCODE
+            $out | Write-Host
+            if ($code -ne 0) { throw "Smoke test failed for $region with exit code $code" }
+            if (($out -join "`n") -match "SCRIPT ERROR") { throw "Script error in $region" }
+          }
+
+      - name: Package
+        shell: pwsh
+        run: |
+          Compress-Archive -Path "build/windows/TheLongNote.exe" -DestinationPath "build/windows/TheLongNote-0.1.0-Windows.zip"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TheLongNote-0.1.0-Windows
+          path: build/windows/TheLongNote-0.1.0-Windows.zip

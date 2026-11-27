@@ -45,6 +45,11 @@ EOF
 ln -sf /Applications "$OUT/dmg/Applications"
 hdiutil create -volname "The Long Note" -srcfolder "$OUT/dmg" -ov -format UDZO "$OUT/TheLongNote-$VERSION-macOS.dmg" >/dev/null
 
+echo "== Windows release =="
+mkdir -p "$OUT/windows"
+"$GODOT" --headless --path game --export-release "Windows Desktop" "$OUT/windows/TheLongNote.exe"
+(cd "$OUT/windows" && zip -q -9 "TheLongNote-$VERSION-Windows.zip" TheLongNote.exe)
+
 echo "== iOS Xcode project =="
 mkdir -p "$OUT/ios"
 set +e
@@ -73,5 +78,6 @@ EOF
   (cd "$OUT/ios" && zip -q -r "$OUT/TheLongNote-$VERSION-iOS-Xcode.zip" .)
 fi
 
-ls -lh "$OUT"/*.dmg "$OUT"/*.zip 2>/dev/null || true
+shasum -a 256 "$OUT"/*.dmg "$OUT"/*.zip "$OUT"/windows/*.zip 2>/dev/null > "$OUT/SHA256SUMS.txt" || true
+ls -lh "$OUT"/*.dmg "$OUT"/*.zip "$OUT"/windows/*.zip 2>/dev/null || true
 echo "Release artifacts are in $OUT"

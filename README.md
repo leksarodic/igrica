@@ -2,7 +2,7 @@
 
 *A valley kept alive by a song. A song made of people. A Listener who can hear the difference.*
 
-**An original open-valley action adventure for macOS and iPhone.**
+**An original open-valley action adventure for macOS, Windows, and iPhone.**
 Engine: Godot 4.7.2 · Language: GDScript · Status: playable vertical slice (0.1.0) · Offline, single-player, no notifications, no timers.
 Repository: <https://github.com/leksarodic/the-long-note>
 
@@ -17,6 +17,7 @@ Repository: <https://github.com/leksarodic/the-long-note>
 
 **Latest release:** <https://github.com/leksarodic/the-long-note/releases/latest>
 
+- **Windows:** `TheLongNote-0.1.0-Windows.zip` — 64-bit Windows 10/11. Unzip anywhere and run `TheLongNote.exe`.
 - **macOS:** `TheLongNote-0.1.0-macOS.dmg` (Apple Silicon and Intel, macOS 13+). The app is ad-hoc signed but not notarized, so macOS will ask you to confirm the first launch: right-click the app → **Open**, or run `xattr -dr com.apple.quarantine "/Applications/The Long Note.app"` once. A `.zip` of the app is also attached.
 - **iPhone:** `TheLongNote-0.1.0-iOS-Xcode.zip` contains the generated Xcode project, PCK, and frameworks. It is **not** a signed IPA; building for a device requires your Apple team and provisioning profile. See [`docs/architecture/ios_build.md`](docs/architecture/ios_build.md).
 - **Source:** the tagged source archive and the full repository are available from the release page.
@@ -108,6 +109,27 @@ godot --path game -- --world bellhollow --benchmark
 | Dialogue choices | 1–9, click, or focus + Enter | D-pad + A |
 
 Touch: floating left stick, right-side camera drag, thumb-arc action cluster, menu pill. All targets are ≥ 64 dp and respect the display safe area.
+
+---
+
+## Run and build on Windows
+
+Download the Windows ZIP, unzip it, and run `TheLongNote.exe`. No installer, account, or network is required. The build is a 64-bit Godot export; input is keyboard/mouse or an XInput gamepad.
+
+To build from source on Windows:
+
+```powershell
+# install Godot 4.7.2 + Windows export templates, then:
+godot --headless --path game --export-release "Windows Desktop" build/windows/TheLongNote.exe
+```
+
+A GitHub Actions workflow (`.github/workflows/windows.yml`) also builds and smoke-tests Bellhollow, Reedwater, and the Sunken Choir on a Windows runner.
+
+```sh
+# from macOS (cross-export)
+mkdir -p build/windows
+godot --headless --path game --export-release "Windows Desktop" build/windows/TheLongNote.exe
+```
 
 ---
 

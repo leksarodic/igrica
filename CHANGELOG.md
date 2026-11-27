@@ -17,7 +17,7 @@
 - Inventory, equipment, crafting, five buildable structures with persistence, skills, journal/lore/echoes, party, map, and settings.
 - Field-notebook UI, character sheet, dialogue with choices, boss bar, and a complete ending screen.
 - Atomic checksummed saves, backups, corruption quarantine, autosave, manual/new slots, explicit cross-device handoff, conflict preservation, and `.longnote` export/import.
-- macOS universal release (ad-hoc signed) and an unsigned iOS Xcode project.
+- macOS universal release (ad-hoc signed), a 64-bit Windows release, and an unsigned iOS Xcode project.
 - Procedural original audio: bells, reeds, strings, wind, ambience, generative music beds.
 - Content validator, 47 logic/save/sync checks, 47 integration checks, and a 36-check end-to-end playthrough.
 

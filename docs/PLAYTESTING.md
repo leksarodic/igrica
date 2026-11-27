@@ -111,6 +111,18 @@ godot --headless --path game --export-debug "macOS" build/macos/LongNote.app
 - Bundle is **ad-hoc signed, not notarized**. Developer ID signing and notarization were not possible without credentials; the release notes explain the first-launch confirmation.
 - Release assets: macOS DMG 67.2 MB, macOS ZIP 59.5 MB, iOS Xcode ZIP 112.6 MB (uploaded sizes). The DMG checksum verified, and the app launched from the mounted DMG and captured a frame.
 
+### Windows
+
+```sh
+godot --headless --path game --export-release "Windows Desktop" build/windows/TheLongNote.exe
+file build/windows/TheLongNote.exe
+```
+
+- Export: **succeeded**, 104 MB 64-bit PE32+ GUI executable with the PCK embedded.
+- Icon resources: multi-size ICO (16–256 px), no remaining icon warnings.
+- Local runtime test: not possible on macOS without a Windows environment; a GitHub Actions Windows runner builds and smoke-tests the same preset.
+- Artifact: `TheLongNote-0.1.0-Windows.zip` (36 MB).
+
 ### iPhone
 
 ```sh
@@ -179,6 +191,7 @@ Not performed manually: a complete keyboard-only playthrough by a human (the aut
 | # | Severity | Area | Description | Status |
 |---|---|---|---|---|
 | D1 | High | Platform | No signed iPhone build, no physical iPhone run; simulator template mismatch. | Documented; exact signing steps in `ios_build.md` |
+| D1b | Medium | Platform | Windows build is exported and CI-smoke-tested, but not manually played on a physical Windows machine in this environment. | Documented |
 | D2 | High | Content | Only chapters 1–2 and the slice finale are built; Glasswood, Hush, Quarry Door, Vault, Low Water are designed only. | Stated in README/GDD |
 | D3 | Medium | Sync | iOS iCloud container path is implemented with fallback but unverified without entitlements/signing. | Documented |
 | D4 | Medium | Art | Bellhollow foreground is too dark/sparse; path ribbon visibility is inconsistent; some props intersect terrain. | Open |
