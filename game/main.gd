@@ -374,7 +374,7 @@ func _build_title() -> void:
 	_add_button(stack, "Leave", _on_quit)
 
 	var version := Label.new()
-	version.text = "Vertical slice 0.1.2   ·   offline, no notifications, no timers"
+	version.text = "Vertical slice 0.1.3   ·   offline, no notifications, no timers"
 	version.add_theme_font_override("font", font)
 	version.add_theme_font_size_override("font_size", 13)
 	version.add_theme_color_override("font_color", Color("#8e9191"))

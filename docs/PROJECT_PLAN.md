@@ -138,7 +138,7 @@ The ordering is deliberate: narrative and systems are specified before code; pur
 - No credentials, keys, or personal data in the repo. iCloud container IDs are configuration, not secrets.
 - `README.md` is the single source of truth for how to run, build, test, and what is implemented.
 - No push to remotes other than the project repository; no force-push over history.
-- Versioning: `0.1.2` for the vertical slice; `1.0.0` reserved for the full game.
+- Versioning: `0.1.3` for the vertical slice; `1.0.0` reserved for the full game.
 - Licenses: engine (MIT), fonts (system, not redistributed), all art/audio original. Third-party assets, if any, are documented before merge.
 
 ---
@@ -154,7 +154,7 @@ The ordering is deliberate: narrative and systems are specified before code; pur
 | 5 Cross-platform | Complete with signing gap | macOS export booted; iOS Xcode project generated; unsigned device build succeeded; sync tested with simulated devices |
 | 6 Expansion | Designed, not shipped | GDD scope table; story bible |
 | 7 Polish | Complete for slice, defects open | `docs/PLAYTESTING.md` records results and D1–D12 |
-| Release | 0.1.2 published | macOS DMG/ZIP, Windows ZIP (CI-tested), iPhone Xcode project; no signed IPA |
+| Release | 0.1.3 published | macOS DMG/ZIP, Windows ZIP (CI-tested), iPhone Xcode project; no signed IPA |
 
 **Actual results:** content validation OK (8,996-word novella), 47 logic/save/sync tests, 49 integration tests, 36 end-to-end playthrough checks, macOS capture, iOS unsigned device build. The benchmark is 60 fps / 336 draw calls / 86.7 MB on an M3. Art, camera, audio audition, and iPhone device validation remain open (D4–D7).
 

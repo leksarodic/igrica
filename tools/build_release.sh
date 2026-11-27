@@ -3,7 +3,7 @@ set -eu
 cd "$(dirname "$0")/.."
 ROOT="$(pwd)"
 GODOT="${GODOT:-godot}"
-VERSION="0.1.2"
+VERSION="0.1.3"
 OUT="$ROOT/build/release"
 APP="$OUT/macos/LongNote.app"
 rm -rf "$OUT"
@@ -25,7 +25,7 @@ ditto -c -k --sequesterRsrc --keepParent "$APP" "$OUT/TheLongNote-$VERSION-macOS
 echo "== package: dmg =="
 cp -R "$APP" "$OUT/dmg/The Long Note.app"
 cat > "$OUT/dmg/Read Me.txt" <<'EOF'
-The Long Note — 0.1.2
+The Long Note — 0.1.3
 
 A valley kept alive by a song. A song made of people.
 

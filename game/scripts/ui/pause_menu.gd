@@ -95,6 +95,9 @@ func _on_open_screen(screen_id: String, _context: Dictionary) -> void:
 		"inventory": _show_inventory()
 		"journal": _show_journal()
 		"settings": _show_settings()
+		"map": _show_map()
+		"skills": _show_skills()
+		"party": _show_party()
 		"save": _show_save_sync()
 		_: _show_journal()
 
@@ -173,6 +176,16 @@ func _show_journal() -> void:
 	var lore_count: int = Game.state.journal.get("lore", {}).size()
 	var echo_count: int = Game.state.journal.get("echoes", {}).size()
 	_content_box.add_child(UITheme.body("Echoes: %d   ·   Lore: %d   ·   Attunement %d" % [echo_count, lore_count, int(Game.state.player.get("attunement", 1))], 15, UITheme.INK_SOFT))
+	if lore_count > 0:
+		_content_box.add_child(UITheme.rule(220))
+		_content_box.add_child(UITheme.eyebrow("WHAT YOU HAVE LEARNED"))
+		for lid in Game.state.journal.get("lore", {}).keys():
+			var entry: Dictionary = Game.content.lore_entry(String(lid))
+			if entry.is_empty():
+				continue
+			_content_box.add_child(UITheme.heading(String(entry.get("title", String(lid))), 19))
+			_content_box.add_child(UITheme.body(String(entry.get("text", "")), 15))
+			_content_box.add_child(UITheme.rule(160))
 	var hints := UITheme.button("Ask for a nudge")
 	hints.pressed.connect(func(): _show_hints())
 	_content_box.add_child(hints)
@@ -421,13 +434,18 @@ func _show_map() -> void:
 	_current = "map"
 	_clear()
 	_screen_title("Map", "A survey, not a quest arrow.")
+	var sketch := MapSketch.new()
+	_content_box.add_child(sketch)
+	_content_box.add_child(UITheme.body("A survey, not a quest arrow. Lanterns are save points, not teleporters.", 14, UITheme.INK_SOFT))
+	_content_box.add_child(UITheme.rule(240))
 	for rid in Game.content.regions.keys():
+		if rid in ["undercave"]:
+			continue
 		var r: Dictionary = Game.content.region(rid)
 		var visited: bool = bool(Game.state.world.get("regions", {}).get(rid, false))
 		var name := String(r.get("name", rid))
 		_content_box.add_child(UITheme.body("%s%s" % [name, "" if visited else " — unexplored"], 17, UITheme.INK if visited else UITheme.INK_SOFT))
-	_content_box.add_child(UITheme.body("Lanterns are save points, not teleporters. Walk, and the valley becomes legible.", 14, UITheme.INK_SOFT))
-
+	_content_box.add_child(UITheme.body("Walk, and the valley becomes legible. No road appears until you have found it.", 14, UITheme.INK_SOFT))
 
 func _show_settings() -> void:
 	_current = "settings"

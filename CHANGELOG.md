@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.3 — 2026-11-27
+
+### Added
+
+- **Readable lore in the journal.** Every discovered inscription, place, and history fragment now opens as a titled page, not just a counter. 15 entries authored for the slice.
+- **Hand-drawn map survey** in the notebook: valley contours, river, region labels, unexplored fog, lantern language, and a compass tick. It shows what you have walked, not where to go next.
+- A working `TODO.md` roadmap with P0/P1/P2/P3 tasks and acceptance criteria.
+
+### Fixed
+
+- W/S direction is normalized to +Y = forward across keyboard, gamepad, and touch (from 0.1.2).
+- Outdoor terrain collision is two-sided, so the player cannot fall through a seam at spawn (from 0.1.1).
+
+### Verified
+
+- 47 logic/save/sync checks, 52 integration checks (including forward/backward movement), 36 playthrough checks.
+- macOS release movement check; Windows CI rebuild and three-region smoke test.
+
 ## 0.1.2 — 2026-11-27
 
 ### Fixed

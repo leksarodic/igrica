@@ -1,0 +1,62 @@
+{
+  "welcome_to_carrow": {
+    "title": "Carrow Vale",
+    "text": "A glacial bowl of three terraces, reed water, and a town built in the dry basin of an old waterfall. The Cantors tuned it like an instrument four hundred years ago. The town has been living inside the instrument ever since, mostly without reading the instructions."
+  },
+  "the_long_note": {
+    "title": "The Long Note",
+    "text": "A sustained chord held in the great bell and the Undersong. It kept the valley's ground and water stable. It was fed by the spring, and when the spring failed, by voices. The Tenders called the feeding maintenance. The valley called it the Tending."
+  },
+  "the_cantors": {
+    "title": "The Cantors",
+    "text": "Surveyors, founders, and acousticians who arrived six hundred years ago. They built the Chimeworks: channels cut to length, stone chimes on the ridges, and a great bell at the centre. They measured everything and believed a place could be understood completely. Then they discovered what a voice could hold."
+  },
+  "the_harvests": {
+    "title": "The Harvests",
+    "text": "The fifteen years when the Gift became a levy and the levy became a hunt. People were silenced and their voices sealed in humstone, and the valley was safe, and everyone agreed not to say the word for it. The Cantors called it the Harvests. The town called it nothing."
+  },
+  "the_hush": {
+    "title": "The Hush",
+    "text": "Not a place. A debt. When a voice is taken and not returned, the silence it leaves gathers, cools, and begins to want. It drains sound, colour, and memory. It can be paid back a name at a time with the chord. It can also be fed, which is the mistake the valley has been making for four centuries."
+  },
+  "mira_alk": {
+    "title": "Mira Alk",
+    "text": "Listener, acoustician, and the first person in living memory to call the Note a debt in writing. She found the three-note chord, went into the Hush to give the voices back, and did not return. Her letter is in Glasswood. Her work is unfinished."
+  },
+  "sable_voss": {
+    "title": "Sable Voss",
+    "text": "Warden of the Note for thirty years. She fed the bell eleven times and remembers every name. She also rang the giving stroke when it mattered and lost her hearing for it. The town has not decided whether she is a monster or a foundation. She has decided, and does not expect agreement."
+  },
+  "quarry_door": {
+    "title": "The Quarry Door",
+    "text": "A sealed Cantor reliquary under the deepest shaft: a tuning floor, a First Bell that has never been rung, and a door that was closed from the inside. The Quarry Guild opened it because it was there. Sable says it should have stayed shut. Both of them are right."
+  },
+  "sunken_choir": {
+    "title": "The Sunken Choir",
+    "text": "A shrine built to hold a note, flooded to hold a silence. The water is not the enemy; it is the shape the silence took when the choir stopped. The Choir Chime at its altar keeps the north channel clear. Something else in the shrine keeps the Chime."
+  },
+  "hollow_stag": {
+    "title": "The Hollow Stag",
+    "text": "A Cantor guardian whose antlers are broken chimes. It was made to keep the water clean and the silence out. Now it keeps everything, including the silence. Its shell is a chord. Read the window, ring the three notes, and it will listen."
+  },
+  "reedfolk": {
+    "title": "The Reedfolk",
+    "text": "Boat families of Reedwater and the Low Water. They put their dead in the reeds, not the bell. They believe the Hush is a tide to be lived with, not a wall to be held. They are hospitable, clannish, and slow to trust anyone who owns a house."
+  },
+  "humstone": {
+    "title": "Humstone",
+    "text": "The dark, fine-grained singing stone from the deep quarry. Cut it right and it remembers a voice. Cut it wrong and it remembers the whole quarry falling on your head. The Cantors built a valley out of it. The Guild builds hinges."
+  },
+  "resonance_fork": {
+    "title": "Resonance Fork",
+    "text": "A field tuning fork made to Mira's pattern. It finds the note inside a stubborn object: a choked channel, a sealed stone, a bell that will not speak. It does not make music. It asks a question."
+  },
+  "echo_maze": {
+    "title": "The Echo Gallery",
+    "text": "A dark room where the Cantors tested listening. Three stones answer to low, high, and mid. The carving gives the order. The Listen pulse gives the stones back for a few breaths. The lesson is not memory; it is attention."
+  },
+  "cantor_survey": {
+    "title": "The Survey Stone",
+    "text": "A limestone slab cut with three notes, a circle, and a measured edge. The marks are not decoration. They are a chord, a bell, and a count. The Cantors could not say anything without building it first, and they could not build anything without saying it twice."
+  }
+}

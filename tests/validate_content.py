@@ -42,6 +42,7 @@ regions = load("regions.json")
 skills = load("skills.json")
 dialogue = load("dialogue.json")
 builds = load("builds.json")
+lore = load("lore.json")
 
 # --- content integrity ----------------------------------------------------
 for rid, recipe in recipes.items():
@@ -81,6 +82,17 @@ for did, dlg in dialogue.items():
                 errors.append(f"dialogue {did}/{nid} choice target missing")
         if "text" not in node:
             errors.append(f"dialogue {did}/{nid} has no text")
+
+for lid, entry in lore.items():
+    for key in ("title", "text"):
+        if key not in entry:
+            errors.append(f"lore {lid} missing {key}")
+
+for did, dlg in dialogue.items():
+    for node in dlg.get("nodes", {}).values():
+        for effect in node.get("effects", []):
+            if effect.get("type") == "lore" and effect.get("id") not in lore:
+                errors.append(f"dialogue {did} references unknown lore {effect.get('id')}")
 
 for sid, skill in skills.items():
     for key in ("name", "description", "arc"):

@@ -75,8 +75,8 @@ Legend: `[x]` done and verified · `[~]` partial · `[ ]` not started · **P0** 
 - [ ] Export/import `.longnote` round-trip on macOS + Windows + iOS Files.
 - [ ] Add a readable “last saved / synced” line without badges.
 - [ ] Inventory filters and equipment comparison; keep the notebook look.
-- [ ] Journal: per-lore entry reading view, not just counts.
-- [ ] Map: hand-drawn survey with explored fog and player pins (currently a region list).
+- [x] Journal: per-lore entry reading view, not just counts.
+- [x] Map: hand-drawn survey with explored labels and a player marker.
 - [ ] Settings: quality changes apply live to shadows/grade/particles.
 - [ ] Onboarding: verify a child can find Wren → Pell → Sable → Nissa without help.
 

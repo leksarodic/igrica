@@ -13,6 +13,7 @@ var regions: Dictionary = {}
 var skills: Dictionary = {}
 var dialogue: Dictionary = {}
 var builds: Dictionary = {}
+var lore: Dictionary = {}
 var errors: Array[String] = []
 
 
@@ -29,6 +30,7 @@ func load_all() -> void:
 	skills = _load("skills.json")
 	dialogue = _load("dialogue.json")
 	builds = _load("builds.json")
+	lore = _load("lore.json")
 	validate()
 
 
@@ -72,6 +74,10 @@ func region(id: String) -> Dictionary:
 
 func skill(id: String) -> Dictionary:
 	return skills.get(id, {})
+
+
+func lore_entry(id: String) -> Dictionary:
+	return lore.get(id, {})
 
 
 func build(id: String) -> Dictionary:
