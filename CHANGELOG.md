@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.1 — 2026-11-27
+
+### Fixed
+
+- **Critical movement fix:** outdoor terrain collision was one-sided, so a player spawned exactly on the heightfield could fall through and become wedged inside a terrain seam. Terrain now uses two-sided trimesh collision, and an integration regression test verifies the player spawns on the ground and walks across Bellhollow.
+- The camera follows the player correctly now that the player can move; the previous behavior looked like a frozen backdrop because the body was stuck.
+
+### Added
+
+- **Windows 10/11 64-bit build** (`TheLongNote-0.1.1-Windows.zip`), built and smoke-tested on a GitHub Actions Windows runner for Bellhollow, Reedwater, and the Sunken Choir.
+- Multi-size Windows icon, Windows export preset, release script support, and Windows instructions.
+
+### Verified
+
+- 47 logic/save/sync checks, 49 integration checks (including outdoor movement), 36 end-to-end playthrough checks.
+- macOS release boot and capture; Windows CI export and three-region smoke test; iOS unsigned device build.
+
 ## 0.1.0 — 2026-11-27
 
 **The Long Note — playable vertical slice**

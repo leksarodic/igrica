@@ -3,7 +3,7 @@
 *A valley kept alive by a song. A song made of people. A Listener who can hear the difference.*
 
 **An original open-valley action adventure for macOS, Windows, and iPhone.**
-Engine: Godot 4.7.2 · Language: GDScript · Status: playable vertical slice (0.1.0) · Offline, single-player, no notifications, no timers.
+Engine: Godot 4.7.2 · Language: GDScript · Status: playable vertical slice (0.1.1) · Offline, single-player, no notifications, no timers.
 Repository: <https://github.com/leksarodic/the-long-note>
 
 ![Bellhollow at dusk](docs/screenshots/bellhollow.png)
@@ -17,12 +17,12 @@ Repository: <https://github.com/leksarodic/the-long-note>
 
 **Latest release:** <https://github.com/leksarodic/the-long-note/releases/latest>
 
-- **Windows:** `TheLongNote-0.1.0-Windows.zip` — 64-bit Windows 10/11. Unzip anywhere and run `TheLongNote.exe`.
-- **macOS:** `TheLongNote-0.1.0-macOS.dmg` (Apple Silicon and Intel, macOS 13+). The app is ad-hoc signed but not notarized, so macOS will ask you to confirm the first launch: right-click the app → **Open**, or run `xattr -dr com.apple.quarantine "/Applications/The Long Note.app"` once. A `.zip` of the app is also attached.
-- **iPhone:** `TheLongNote-0.1.0-iOS-Xcode.zip` contains the generated Xcode project, PCK, and frameworks. It is **not** a signed IPA; building for a device requires your Apple team and provisioning profile. See [`docs/architecture/ios_build.md`](docs/architecture/ios_build.md).
+- **Windows:** `TheLongNote-0.1.1-Windows.zip` — 64-bit Windows 10/11. Unzip anywhere and run `TheLongNote.exe`.
+- **macOS:** `TheLongNote-0.1.1-macOS.dmg` (Apple Silicon and Intel, macOS 13+). The app is ad-hoc signed but not notarized, so macOS will ask you to confirm the first launch: right-click the app → **Open**, or run `xattr -dr com.apple.quarantine "/Applications/The Long Note.app"` once. A `.zip` of the app is also attached.
+- **iPhone:** `TheLongNote-0.1.1-iOS-Xcode.zip` contains the generated Xcode project, PCK, and frameworks. It is **not** a signed IPA; building for a device requires your Apple team and provisioning profile. See [`docs/architecture/ios_build.md`](docs/architecture/ios_build.md).
 - **Source:** the tagged source archive and the full repository are available from the release page.
 
-The release is the same build covered by the test record below: 47 logic/save/sync checks, 47 integration checks, and a 36-check end-to-end playthrough.
+The release is the same build covered by the test record below: 47 logic/save/sync checks, 49 integration checks, and a 36-check end-to-end playthrough.
 
 ---
 
@@ -200,7 +200,7 @@ Current results (macOS 27, Apple M3):
 ```text
 content validation  OK   (novella 8,996 words; 31 items; 12 recipes; 8 dialogues; 5 builds)
 TestScene           47 passed, 0 failed
-Integration         47 passed, 0 failed
+Integration         49 passed, 0 failed
 Playthrough         36 passed, 0 failed
 macOS export        boots; frame capture verified
 iOS export          Xcode project generated; unsigned device build succeeded

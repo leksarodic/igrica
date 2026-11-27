@@ -138,7 +138,7 @@ The ordering is deliberate: narrative and systems are specified before code; pur
 - No credentials, keys, or personal data in the repo. iCloud container IDs are configuration, not secrets.
 - `README.md` is the single source of truth for how to run, build, test, and what is implemented.
 - No push to remotes other than the project repository; no force-push over history.
-- Versioning: `0.1.0` for the vertical slice; `1.0.0` reserved for the full game.
+- Versioning: `0.1.1` for the vertical slice; `1.0.0` reserved for the full game.
 - Licenses: engine (MIT), fonts (system, not redistributed), all art/audio original. Third-party assets, if any, are documented before merge.
 
 ---
@@ -150,12 +150,12 @@ The ordering is deliberate: narrative and systems are specified before code; pur
 | 1 Creative direction | Complete | `docs/GAME_CONCEPTS.md`, GDD, art/audio/UX, architecture |
 | 2 Narrative | Complete | `docs/story/*`, word count verified |
 | 3 Technical foundation | Complete | project boots, tests pass, save round-trip |
-| 4 Vertical slice | Complete | 47 integration checks and a 36-check end-to-end playthrough; real regions/dialogue/puzzles/boss |
+| 4 Vertical slice | Complete | 49 integration checks and a 36-check end-to-end playthrough; real regions/dialogue/puzzles/boss |
 | 5 Cross-platform | Complete with signing gap | macOS export booted; iOS Xcode project generated; unsigned device build succeeded; sync tested with simulated devices |
 | 6 Expansion | Designed, not shipped | GDD scope table; story bible |
 | 7 Polish | Complete for slice, defects open | `docs/PLAYTESTING.md` records results and D1–D12 |
-| Release | macOS 0.1.0 published | DMG/ZIP, ad-hoc signed; iPhone Xcode project attached; no signed IPA |
+| Release | macOS 0.1.1 published | DMG/ZIP, ad-hoc signed; iPhone Xcode project attached; no signed IPA |
 
-**Actual results:** content validation OK (8,996-word novella), 47 logic/save/sync tests, 47 integration tests, 36 end-to-end playthrough checks, macOS capture, iOS unsigned device build. The benchmark is 60 fps / 336 draw calls / 86.7 MB on an M3. Art, camera, audio audition, and iPhone device validation remain open (D4–D7).
+**Actual results:** content validation OK (8,996-word novella), 47 logic/save/sync tests, 49 integration tests, 36 end-to-end playthrough checks, macOS capture, iOS unsigned device build. The benchmark is 60 fps / 336 draw calls / 86.7 MB on an M3. Art, camera, audio audition, and iPhone device validation remain open (D4–D7).
 
 This ledger is updated only with evidence. Where something is partial, it says so.

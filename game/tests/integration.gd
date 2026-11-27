@@ -21,6 +21,14 @@ func _ready() -> void:
 	check(world.region_id == "bellhollow", "bellhollow built")
 	check(world.player.global_position.distance_to(Vector3.ZERO) < 80.0, "player has a sane spawn")
 	check(world.region.lanterns.size() >= 4, "lanterns placed")
+	check(world.player.is_on_floor(), "player spawns on the terrain surface")
+	var start_pos := world.player.global_position
+	Input.action_press("move_forward")
+	await get_tree().create_timer(0.6).timeout
+	Input.action_release("move_forward")
+	await get_tree().physics_frame
+	check(world.player.global_position.distance_to(start_pos) > 0.3, "player moves across outdoor terrain")
+	world.player.global_position = world.region.spawn_point("arrival")["position"]
 	var roost := _find_prompt(world.region, "Coax the bell")
 	check(roost != null, "Pip's roost exists")
 	if roost != null:

@@ -175,7 +175,7 @@ Saves are **JSON**, schema-versioned, checksummed, atomic, and human-inspectable
 {
   "magic": "longnote.save",
   "schema": 1,
-  "game_version": "0.1.0",
+  "game_version": "0.1.1",
   "save_id": "uuid",
   "slot": "wren",
   "created_utc": "2026-11-23T10:00:00Z",
@@ -269,7 +269,7 @@ Dialogue format: nodes with `id`, `speaker`, `text`, optional `choices` (text, c
 
 ## 14. Testing strategy
 
-**Current results (23 November 2026):** 47 logic/save/sync checks, 47 integration checks, 36 end-to-end playthrough checks, content validation OK, macOS export booted, iOS Xcode project generated with an unsigned device build succeeding. Full details and open defects are in `docs/PLAYTESTING.md`.
+**Current results (23 November 2026):** 47 logic/save/sync checks, 49 integration checks, 36 end-to-end playthrough checks, content validation OK, macOS export booted, iOS Xcode project generated with an unsigned device build succeeding. Full details and open defects are in `docs/PLAYTESTING.md`.
 
 1. **Pure logic tests (headless, fast):** save serialization/checksum/atomicity, migrations, sync conflict matrix, inventory/equipment rules, crafting, quest state machines, puzzle solvers, dialogue conditions, procedural cave invariants, damage math, AI utility scoring.
 2. **Scene integration tests (headless):** boot world, simulate player input via `Input.action_press`, complete the quest chain with scripted interactions, verify save/load round-trip including world flags, run the boss arena with an invulnerable test player to validate phase transitions.

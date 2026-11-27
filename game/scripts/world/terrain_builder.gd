@@ -157,6 +157,10 @@ static func build(region_id: String) -> Dictionary:
 	var body := StaticBody3D.new()
 	body.name = "TerrainBody"
 	var cs := CollisionShape3D.new()
-	cs.shape = mesh.create_trimesh_shape()
+	var shape := mesh.create_trimesh_shape()
+	# The heightfield is a thin surface, not a closed solid. Two-sided collision
+	# prevents a body from falling through a back-facing triangle at a seam.
+	shape.backface_collision = true
+	cs.shape = shape
 	body.add_child(cs)
 	return {"mesh": mesh, "body": body, "size": SIZE}

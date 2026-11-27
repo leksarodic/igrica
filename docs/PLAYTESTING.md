@@ -1,6 +1,6 @@
 # Playtesting and Verification
 
-**Build:** 0.1.0 vertical slice
+**Build:** 0.1.1 vertical slice
 **Date:** 23 November 2026
 **Hardware:** Apple M3, 16 GB, macOS 27.2.1, 2560×1664 internal display
 **Engine:** Godot 4.7.2 stable (Metal 4 Forward Mobile)
@@ -53,7 +53,7 @@ Coverage includes:
 godot --headless --path game res://tests/Integration.tscn
 ```
 
-Result: **47 passed, 0 failed**
+Result: **49 passed, 0 failed**
 
 Coverage includes:
 
@@ -122,7 +122,7 @@ file build/windows/TheLongNote.exe
 - Icon resources: multi-size ICO (16–256 px), no remaining icon warnings.
 - GitHub Actions Windows 11 runner: **passed** — Godot import, Windows release export, and headless smoke tests for Bellhollow, Reedwater, and the Sunken Choir (exit code 0, no `SCRIPT ERROR`).
 - Artifact tested by CI is the one attached to the release (39.5 MB ZIP, 109.5 MB exe).
-- Artifact: `TheLongNote-0.1.0-Windows.zip` (36 MB).
+- Artifact: `TheLongNote-0.1.1-Windows.zip` (36 MB).
 
 ### iPhone
 

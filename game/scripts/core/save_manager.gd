@@ -8,7 +8,7 @@ extends RefCounted
 
 const MAGIC := "longnote.save"
 const SCHEMA := 1
-const GAME_VERSION := "0.1.0"
+const GAME_VERSION := "0.1.1"
 
 var base_dir := "user://saves"
 var device_id := ""

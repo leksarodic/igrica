@@ -20,6 +20,7 @@ var _ending_choice := ""
 var _give_kits := false
 var _auto_build := ""
 var _benchmark := false
+var _selftest_move := false
 
 
 func _ready() -> void:
@@ -90,6 +91,8 @@ func _parse_args() -> void:
 					_auto_build = args[i + 1]
 			"--benchmark":
 				_benchmark = true
+			"--selftest-move":
+				_selftest_move = true
 
 
 func _start_world(region_id: String, spawn_id: String) -> void:
@@ -135,6 +138,30 @@ func _start_world(region_id: String, spawn_id: String) -> void:
 		Game.state.set_quest_choice("main_02", "outcome", _ending_choice)
 		Game.state.set_quest("main_02", 8, "done")
 		Events.dialogue_finished.emit("stag_choice", "")
+	if _selftest_move and _world != null and _world.player != null:
+		await get_tree().create_timer(0.5).timeout
+		var p0 := _world.player.global_position
+		var c0 := _world.player.rig.camera.global_position
+		print("PRETEST paused=", get_tree().paused, " mode=", InputRouter.mode, " action=", Input.is_action_pressed("move_forward"), " vec=", InputRouter.get_move_vector(), " pos=", p0, " vel=", _world.player.velocity, " floor=", _world.player.is_on_floor(), " dialogue=", Game.dialogue_active, " build=", Game.build_mode)
+		var space := _world.get_world_3d().direct_space_state
+		var q := PhysicsRayQueryParameters3D.create(Vector3(p0.x, p0.y + 10.0, p0.z), Vector3(p0.x, p0.y - 10.0, p0.z), 1 | 4)
+		q.exclude = [_world.player.get_rid()]
+		var hit := space.intersect_ray(q)
+		print("RAY ", hit)
+		print("COLLISIONS ", _world.player.get_slide_collision_count())
+		for ci in _world.player.get_slide_collision_count():
+			var col := _world.player.get_slide_collision(ci)
+			print("  COL ", ci, " ", col.get_collider(), " normal=", col.get_normal())
+		Input.action_press("move_forward")
+		await get_tree().create_timer(0.2).timeout
+		print("MIDTEST action=", Input.is_action_pressed("move_forward"), " vec=", InputRouter.get_move_vector(), " vel=", _world.player.velocity, " pos=", _world.player.global_position)
+		await get_tree().create_timer(1.0).timeout
+		Input.action_release("move_forward")
+		await get_tree().process_frame
+		var p1 := _world.player.global_position
+		var c1 := _world.player.rig.camera.global_position
+		print("MOVETEST player_delta=", p1 - p0, " camera_delta=", c1 - c0, " fps=", Engine.get_frames_per_second())
+		get_tree().quit(0)
 	if _benchmark:
 		await get_tree().create_timer(4.0).timeout
 		print("BENCH fps=", Engine.get_frames_per_second(),
@@ -347,7 +374,7 @@ func _build_title() -> void:
 	_add_button(stack, "Leave", _on_quit)
 
 	var version := Label.new()
-	version.text = "Vertical slice 0.1.0   ·   offline, no notifications, no timers"
+	version.text = "Vertical slice 0.1.1   ·   offline, no notifications, no timers"
 	version.add_theme_font_override("font", font)
 	version.add_theme_font_size_override("font_size", 13)
 	version.add_theme_color_override("font_color", Color("#8e9191"))
