@@ -120,7 +120,8 @@ file build/windows/TheLongNote.exe
 
 - Export: **succeeded**, 104 MB 64-bit PE32+ GUI executable with the PCK embedded.
 - Icon resources: multi-size ICO (16–256 px), no remaining icon warnings.
-- Local runtime test: not possible on macOS without a Windows environment; a GitHub Actions Windows runner builds and smoke-tests the same preset.
+- GitHub Actions Windows 11 runner: **passed** — Godot import, Windows release export, and headless smoke tests for Bellhollow, Reedwater, and the Sunken Choir (exit code 0, no `SCRIPT ERROR`).
+- Artifact tested by CI is the one attached to the release (39.5 MB ZIP, 109.5 MB exe).
 - Artifact: `TheLongNote-0.1.0-Windows.zip` (36 MB).
 
 ### iPhone
