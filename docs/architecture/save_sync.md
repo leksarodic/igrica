@@ -26,7 +26,7 @@ Path: `user://saves/<slot>.json` (Godot's per-application user directory; `LongN
   "header": {
     "magic": "longnote.save",
     "schema": 1,
-    "game_version": "0.1.1",
+    "game_version": "0.1.2",
     "slot": "autosave",
     "save_id": "uuid",
     "created_utc": "2026-11-23T12:00:00",

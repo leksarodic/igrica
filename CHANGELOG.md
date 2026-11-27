@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.2 — 2026-11-27
+
+### Fixed
+
+- **W/S were inverted.** Keyboard input used Godot's `get_vector` convention (+Y = back), while the touch stick used +Y = forward. `InputRouter` now normalizes both to +Y = forward, so W walks toward the camera's forward direction and S walks back. Added assertions for both directions.
+- The camera follows correctly in the same pass; the movement regression test now checks direction, not just distance.
+
+### Verified
+
+- 47 logic/save/sync checks, 52 integration checks (spawn, forward, backward, visible terrain, quest/puzzle chain), 36 end-to-end playthrough checks.
+- macOS release booted and direction-checked; Windows CI rebuilt and smoke-tested.
+
 ## 0.1.1 — 2026-11-27
 
 ### Fixed

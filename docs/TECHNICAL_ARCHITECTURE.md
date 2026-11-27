@@ -175,7 +175,7 @@ Saves are **JSON**, schema-versioned, checksummed, atomic, and human-inspectable
 {
   "magic": "longnote.save",
   "schema": 1,
-  "game_version": "0.1.1",
+  "game_version": "0.1.2",
   "save_id": "uuid",
   "slot": "wren",
   "created_utc": "2026-11-23T10:00:00Z",

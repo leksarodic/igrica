@@ -139,9 +139,12 @@ func is_touch_mode() -> bool:
 
 
 func get_move_vector() -> Vector2:
+	# Convention: +Y means forward, +X means right. Godot's get_vector gives
+	# +Y for "move_back", so flip it once here for every input mode.
 	if mode == Mode.TOUCH and touch_move.length() > 0.08:
 		return touch_move.limit_length(1.0)
-	return Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	var v := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	return Vector2(v.x, -v.y)
 
 
 func consume_camera_delta() -> Vector2:

@@ -23,11 +23,24 @@ func _ready() -> void:
 	check(world.region.lanterns.size() >= 4, "lanterns placed")
 	check(world.player.is_on_floor(), "player spawns on the terrain surface")
 	var start_pos := world.player.global_position
+	var forward_dir := world.player.rig.forward()
 	Input.action_press("move_forward")
 	await get_tree().create_timer(0.6).timeout
 	Input.action_release("move_forward")
 	await get_tree().physics_frame
-	check(world.player.global_position.distance_to(start_pos) > 0.3, "player moves across outdoor terrain")
+	var delta := world.player.global_position - start_pos
+	delta.y = 0.0
+	check(delta.length() > 0.3, "player moves across outdoor terrain")
+	check(delta.normalized().dot(forward_dir) > 0.7, "W moves toward the camera's forward direction")
+	start_pos = world.player.global_position
+	Input.action_press("move_back")
+	await get_tree().create_timer(0.4).timeout
+	Input.action_release("move_back")
+	await get_tree().physics_frame
+	delta = world.player.global_position - start_pos
+	delta.y = 0.0
+	check(delta.length() > 0.2, "S moves across outdoor terrain")
+	check(delta.normalized().dot(forward_dir) < -0.7, "S moves backward")
 	world.player.global_position = world.region.spawn_point("arrival")["position"]
 	var roost := _find_prompt(world.region, "Coax the bell")
 	check(roost != null, "Pip's roost exists")
