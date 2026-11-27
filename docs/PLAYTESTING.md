@@ -68,7 +68,7 @@ Coverage includes:
 - Building a lantern post, persistence in state, restore after region rebuild, no duplicate records.
 - Explicit cross-device transfer: `Save and continue on another device` writes a verified shared snapshot.
 - Save/load with quest and boss flags after the ending.
-- Player movement under injected input (0.8 s forward, >0.3 m displacement).
+- Player spawns on the terrain surface and walks across Bellhollow under injected input (outdoor movement regression for the 0.1.1 collision fix).
 
 ### 1.4 End-to-end playthrough
 
@@ -193,6 +193,7 @@ Not performed manually: a complete keyboard-only playthrough by a human (the aut
 |---|---|---|---|---|
 | D1 | High | Platform | No signed iPhone build, no physical iPhone run; simulator template mismatch. | Documented; exact signing steps in `ios_build.md` |
 | D1b | Medium | Platform | Windows build is exported and CI-smoke-tested, but not manually played on a physical Windows machine in this environment. | Documented |
+| D1c | Fixed | World | Outdoor terrain collision was one-sided; a player could fall through a seam and become stuck. Fixed in 0.1.1 with two-sided trimesh collision and a regression test. | Fixed |
 | D2 | High | Content | Only chapters 1–2 and the slice finale are built; Glasswood, Hush, Quarry Door, Vault, Low Water are designed only. | Stated in README/GDD |
 | D3 | Medium | Sync | iOS iCloud container path is implemented with fallback but unverified without entitlements/signing. | Documented |
 | D4 | Medium | Art | Bellhollow foreground is too dark/sparse; path ribbon visibility is inconsistent; some props intersect terrain. | Open |
